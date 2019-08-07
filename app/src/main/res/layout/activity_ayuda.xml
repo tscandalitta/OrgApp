@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedorInfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.ActivityAyuda">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+
+        tools:context=".Main.INICIOFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tituloAyuda"
+                    style="@style/Titulos"
+                    android:text="@string/informacion_y_ayuda" />
+
+                <TextView
+                    android:id="@+id/cuerpoAyuda"
+                    style="@style/Cuerpos"
+                    android:text="@string/texto_ayuda"
+                    android:layout_below="@id/tituloAyuda"/>
+
+                <View android:id="@+id/first"
+                    android:layout_height="2dp"
+                    android:layout_width="fill_parent"
+                    android:layout_below="@id/cuerpoAyuda"
+                    android:background="#777" />
+
+                <TextView
+                    android:id="@+id/tituloAyudaConvertidor"
+                    style="@style/Titulos"
+                    android:layout_below="@id/first"
+                    android:text="@string/cambio_de_base" />
+
+                <TextView
+                    android:id="@+id/CuerpoAyudaConvertidor"
+                    style="@style/Cuerpos"
+                    android:layout_below="@id/tituloAyudaConvertidor"
+                    android:text="@string/texto_ayuda_cambio_de_base" />
+
+                <View android:id="@+id/secondDivider"
+                    android:layout_height="2dp"
+                    android:layout_width="fill_parent"
+                    android:layout_below="@id/CuerpoAyudaConvertidor"
+                    android:background="#777" />
+
+                <TextView
+                    android:id="@+id/titulo_ayuda_sistemas_representacion"
+                    style="@style/Titulos"
+                    android:layout_below="@id/secondDivider"
+                    android:text="@string/sistemas_de_representacion" />
+
+                <TextView
+                    android:id="@+id/cuerpoAyudaSistemasDeRepresentacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titulo_ayuda_sistemas_representacion"
+                    android:text="@string/texto_ayuda_sistemas_de_representacion" />
+
+                <View android:id="@+id/thirdDivider"
+                    android:layout_height="2dp"
+                    android:layout_width="fill_parent"
+                    android:layout_below="@id/cuerpoAyudaSistemasDeRepresentacion"
+                    android:background="#777" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thirdDivider"
+                    android:text="TextView7" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView7"
+                    android:text="TextView5" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView5"
+                    android:text="TextView4" />
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

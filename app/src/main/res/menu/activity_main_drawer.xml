@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:checkable="true"
+        android:id="@+id/nav_inicio"
+        android:title="@string/inicio" />
+
+    <item android:title="@string/aritmetica">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_cambio_de_base"
+                    android:title="@string/cambio_de_base" />
+                <item
+                    android:id="@+id/nav_sistemas_de_representacion"
+                    android:title="@string/sistemas_de_representacion" />
+                <item
+                    android:id="@+id/nav_operaciones_Arimetica"
+                    android:title="@string/operaciones_aritmeticas" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/deteccion_de_errores">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_lrc_vrc"
+                    android:title="@string/lrc_vrc" />
+                <item
+                    android:id="@+id/nav_crc"
+                    android:title="@string/crc" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/correccion_de_errores">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_hamming"
+                    android:title="@string/hamming" />
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="Punto Flotante">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_redondeo"
+                    android:title="@string/redondeo" />
+            </group>
+
+        </menu>
+    </item>
+</menu>
