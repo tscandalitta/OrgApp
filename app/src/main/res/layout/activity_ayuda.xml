@@ -32,12 +32,13 @@
                 <TextView
                     android:id="@+id/cuerpoAyuda"
                     style="@style/Cuerpos"
-                    android:text="@string/texto_ayuda"
-                    android:layout_below="@id/tituloAyuda"/>
+                    android:layout_below="@id/tituloAyuda"
+                    android:text="@string/texto_ayuda" />
 
-                <View android:id="@+id/first"
-                    android:layout_height="2dp"
+                <View
+                    android:id="@+id/first"
                     android:layout_width="fill_parent"
+                    android:layout_height="2dp"
                     android:layout_below="@id/cuerpoAyuda"
                     android:background="#777" />
 
@@ -53,9 +54,10 @@
                     android:layout_below="@id/tituloAyudaConvertidor"
                     android:text="@string/texto_ayuda_cambio_de_base" />
 
-                <View android:id="@+id/secondDivider"
-                    android:layout_height="2dp"
+                <View
+                    android:id="@+id/secondDivider"
                     android:layout_width="fill_parent"
+                    android:layout_height="2dp"
                     android:layout_below="@id/CuerpoAyudaConvertidor"
                     android:background="#777" />
 
@@ -72,24 +74,42 @@
                     android:layout_below="@id/titulo_ayuda_sistemas_representacion"
                     android:text="@string/texto_ayuda_sistemas_de_representacion" />
 
-                <View android:id="@+id/thirdDivider"
-                    android:layout_height="2dp"
+                <View
+                    android:id="@+id/thirdDivider"
                     android:layout_width="fill_parent"
+                    android:layout_height="2dp"
                     android:layout_below="@id/cuerpoAyudaSistemasDeRepresentacion"
                     android:background="#777" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/titulo_Redondeo"
+                    style="@style/Titulos"
+                    android:layout_below="@id/thirdDivider"
+                    android:text="Redondeo" />
+
+                <TextView
+                    android:id="@id/cuerpoAyuda_Redondeo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/thirdDivider"
-                    android:text="TextView7" />
+                    android:layout_below="@id/titulo_Redondeo"
+                    android:layout_marginTop="1dp"
+                    android:text="*Ingrese el numero en la base que desee y la precision deseada. La aplicacion por el momento mostrara el numero truncado" />
+
+
+                <View
+                    android:id="@+id/fourthdivider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignBottom="@+id/cuerpoAyuda_Redondeo"
+                    android:layout_marginBottom="-10dp"
+                    android:background="#777" />
 
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/textView7"
+                    android:layout_below="@+id/fourthdivider"
+                    android:layout_marginTop="12dp"
                     android:text="TextView5" />
 
                 <TextView
@@ -97,7 +117,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView5"
+                    android:layout_marginTop="36dp"
                     android:text="TextView4" />
+
             </RelativeLayout>
         </ScrollView>
 
