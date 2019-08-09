@@ -85,7 +85,7 @@
                     android:id="@+id/titulo_Redondeo"
                     style="@style/Titulos"
                     android:layout_below="@id/thirdDivider"
-                    android:text="Redondeo" />
+                    android:text="Redondeos" />
 
                 <TextView
                     android:id="@id/cuerpoAyuda_Redondeo"
