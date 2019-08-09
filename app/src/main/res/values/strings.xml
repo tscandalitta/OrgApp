@@ -53,6 +53,11 @@
     <string name="texto_ayuda_sistemas_de_representacion">*Seleccione la base de origen y el sistema
         de representación en la cual desea ingresar el número a convertir. La aplicación solo
         convierte números enteros. Podrá visualizar el número en las diferentes representaciones\n</string>
+    <string name="texto_ayuda_redondeo">*Ingrese el numero en la base que desee y la precision deseada. La aplicacion por el momento mostrara el numero truncado
+
+    </string>
+
+
 
     <string name="informacion_inicio">Esta aplicación fue diseñada como parte del final de TDP -
         2018\n\n\nAutores:

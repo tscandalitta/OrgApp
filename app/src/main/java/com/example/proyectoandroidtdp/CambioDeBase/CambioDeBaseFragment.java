@@ -215,4 +215,10 @@ public class CambioDeBaseFragment extends Fragment {
                 cantPuntos++;
         return cantPuntos;
     }
+
+
+
+
+
+
 }

@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/titulo_Redondeo"
                     android:layout_marginTop="1dp"
-                    android:text="*Ingrese el numero en la base que desee y la precision deseada. La aplicacion por el momento mostrara el numero truncado" />
+                    android:text="@string/texto_ayuda_redondeo" />
 
 
                 <View
