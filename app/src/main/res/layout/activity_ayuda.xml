@@ -67,6 +67,7 @@
 
                 <TextView
                     android:id="@+id/cuerpoAyudaSistemasDeRepresentacion"
+                    style="@style/Cuerpos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/titulo_ayuda_sistemas_representacion"

@@ -13,8 +13,10 @@ public class Redondeador implements RedondeadorAbstracto {
         if(partes.length >= 2) {
             parteEntera = partes[0];
             parteFraccionaria = partes[1];
+
             if(parteFraccionaria.length() > pre)
                 parteFraccionaria = parteFraccionaria.substring(0, pre);
+
             if(parteFraccionaria.equals(""))
                 numero = parteEntera;
             else

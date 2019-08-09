@@ -1,5 +1,6 @@
 package com.example.proyectoandroidtdp.CambioDeBase;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,10 +25,12 @@ import com.example.proyectoandroidtdp.R;
 
 public class CambioDeBaseFragment extends Fragment {
 
-    private EditText editTextNumero,txtNroConvertido3,txtNroConvertido2,txtNroConvertido1;
+    private TextView txtNroConvertido3,txtNroConvertido2,txtNroConvertido1;
+    private EditText editTextNumero;
     private TextView labelBase1, labelBase2, labelBase3;
-
+    int colorTexto;
     private String baseSeleccionada;
+    Spinner spinnerDeBases;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -38,24 +42,23 @@ public class CambioDeBaseFragment extends Fragment {
 
         //BUSCO EL EDIT TEXT
         editTextNumero = view.findViewById(R.id.txtNumeroIngresado);
-
         txtNroConvertido3 = view.findViewById(R.id.txtNroConvertido3);
         txtNroConvertido1 = view.findViewById(R.id.txtNroConvertido1);
         txtNroConvertido2 = view.findViewById(R.id.txtNroConvertido2);
-
-        txtNroConvertido1.setTextIsSelectable(false);
-
         labelBase1 = view.findViewById(R.id.txtBase1);
         labelBase2 = view.findViewById(R.id.txtBase2);
         labelBase3 = view.findViewById(R.id.txtBase3);
 
+        colorTexto = txtNroConvertido1.getCurrentTextColor();
+
+        txtNroConvertido1.setTextIsSelectable(false);
 
         //BUSCO EL SPINNER Y LO CREO.
-        Spinner spinnerDeBases = view.findViewById(R.id.spinner);
+        spinnerDeBases = view.findViewById(R.id.spinner);
         String [] bases = getResources().getStringArray(R.array.arraySpinner);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getActivity().getApplicationContext(),
-                android.R.layout.simple_list_item_1,bases);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                R.layout.item_spinner, R.id.texto_spinner,bases);
+        arrayAdapter.setDropDownViewResource(R.layout.item_spinner);
 
 
         spinnerDeBases.setAdapter(arrayAdapter);
@@ -65,6 +68,12 @@ public class CambioDeBaseFragment extends Fragment {
 
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+
+               TextView selectedText = (TextView) adapterView.getChildAt(0).findViewById(R.id.texto_spinner);
+                if (selectedText != null) {
+                    selectedText.setTextColor(colorTexto);
+                }
+
                 //limpio editText
                 editTextNumero.setText("");
 

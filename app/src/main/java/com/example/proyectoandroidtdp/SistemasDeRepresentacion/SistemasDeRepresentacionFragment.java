@@ -23,11 +23,12 @@ import com.example.proyectoandroidtdp.R;
 
 public class SistemasDeRepresentacionFragment extends Fragment {
 
-    private EditText editTextNumero, txtRepresentacion1,txtRepresentacion2;
-    private TextView labelRepresentacion1,labelRepresentacion2;
+    private EditText editTextNumero;
+    private TextView labelRepresentacion1,labelRepresentacion2, txtRepresentacion1,txtRepresentacion2;
     private SistemaSeleccionado sistemaSeleccionado;
     private BaseSeleccionada baseSeleccionada;
     private SistemasDeRepresentacionFragment este;
+    private int colorTexto;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,18 +48,21 @@ public class SistemasDeRepresentacionFragment extends Fragment {
         labelRepresentacion2 = view.findViewById(R.id.labelRepresentacion2);
 
         este = this;
+        colorTexto = txtRepresentacion1.getCurrentTextColor();
 
         //BUSCO EL SPINNER Y LO CREO.
         Spinner spinnerDeBases = view.findViewById(R.id.spinnerSRBases);
         String [] bases = getResources().getStringArray(R.array.arraySpinner);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getActivity().getApplicationContext(),android.R.layout.simple_list_item_1,bases);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getActivity().getApplicationContext(),
+                R.layout.item_spinner, R.id.texto_spinner,bases);
+        arrayAdapter.setDropDownViewResource(R.layout.item_spinner);
 
         //BUSCO EL SPINNER Y LO CREO.
         Spinner spinnerDeRepresentaciones = view.findViewById(R.id.spinnerSRSistemas);
         String [] basesSR = getResources().getStringArray(R.array.arraySpinnerSistemasDeRepresentacion);
-        ArrayAdapter<String> arrayAdapterSR = new ArrayAdapter<>(getActivity().getApplicationContext(),android.R.layout.simple_list_item_1,basesSR);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> arrayAdapterSR = new ArrayAdapter<>(getActivity().getApplicationContext(),
+                R.layout.item_spinner, R.id.texto_spinner,basesSR);
+        arrayAdapter.setDropDownViewResource(R.layout.item_spinner);
 
         spinnerDeBases.setAdapter(arrayAdapter);
 
@@ -66,6 +70,10 @@ public class SistemasDeRepresentacionFragment extends Fragment {
 
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                TextView selectedText = (TextView) adapterView.getChildAt(0).findViewById(R.id.texto_spinner);
+                if (selectedText != null) {
+                    selectedText.setTextColor(colorTexto);
+                }
                 //limpio editText
                 editTextNumero.setText("");
                 InputFilter inputFilter;
@@ -105,6 +113,11 @@ public class SistemasDeRepresentacionFragment extends Fragment {
 
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                TextView selectedText = (TextView) adapterView.getChildAt(0).findViewById(R.id.texto_spinner);
+                if (selectedText != null) {
+                    selectedText.setTextColor(colorTexto);
+                }
+
                 //limpio editText
                 editTextNumero.setText("");
 

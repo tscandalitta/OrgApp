@@ -42,17 +42,19 @@
     <string name="oct">OCT</string>
     <string name="hex">HEX</string>
     <string name="dec">DEC</string>
+    <string name="resultado">RESULTADO</string>
 
-    <string name="texto_ayuda">*Aquí podrá encontrar la información necesaria para utilizar esta
+    <string name="texto_ayuda">* Aquí podrá encontrar la información necesaria para utilizar esta
         aplicación.\n</string>
 
-    <string name="texto_ayuda_cambio_de_base">*Seleccione la base de origen e ingrese el numero no
+    <string name="texto_ayuda_cambio_de_base">* Seleccione la base de origen e ingrese el numero no
         signado a convertir, ya sea entero o fraccionario. Podrá visualizar el número convertido en
         las demás bases.\n</string>
 
-    <string name="texto_ayuda_sistemas_de_representacion">*Seleccione la base de origen y el sistema
+    <string name="texto_ayuda_sistemas_de_representacion">* Seleccione la base de origen y el sistema
         de representación en la cual desea ingresar el número a convertir. La aplicación solo
         convierte números enteros. Podrá visualizar el número en las diferentes representaciones\n</string>
+
 
     <string name="informacion_inicio">Esta aplicación fue diseñada como parte del final de TDP -
         2018\n\n\nAutores:
