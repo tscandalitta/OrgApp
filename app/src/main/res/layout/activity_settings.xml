@@ -26,27 +26,13 @@
 
             <Switch
                 android:id="@+id/t_toggle"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/texto_opcion_tema_oscuro"
-                android:text="Tema Oscuro" />
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/tema_oscuro"
+                android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/titulo_opcion_tema_oscuro"
-                style="@style/Titulos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tema Oscuro" />
-
-            <TextView
-                android:id="@+id/texto_opcion_tema_oscuro"
-                style="@style/Cuerpos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/titulo_opcion_tema_oscuro"
-                android:layout_marginEnd="8dp"
-                android:text="Active o desactive el tema oscuro"
-                app:layout_constraintEnd_toEndOf="parent" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>

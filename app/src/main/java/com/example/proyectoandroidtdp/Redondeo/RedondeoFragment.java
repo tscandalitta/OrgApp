@@ -2,6 +2,7 @@ package com.example.proyectoandroidtdp.Redondeo;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,10 @@ public class RedondeoFragment extends Fragment {
         txtPrecision = view.findViewById(R.id.txtPrecision);
         txtTruncado = view.findViewById(R.id.txtRedondeoTruncado);
         btnRedondear = view.findViewById(R.id.btnRedondear);
-
+        InputFilter[] filtroNumero = {new InputFilter.LengthFilter(20)};
+        InputFilter[] filtroPrecision = {new InputFilter.LengthFilter(2)};
+        txtNumero.setFilters(filtroNumero);
+        txtPrecision.setFilters(filtroPrecision);
         btnRedondear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
