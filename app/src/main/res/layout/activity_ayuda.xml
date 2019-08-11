@@ -10,10 +10,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-
         tools:context=".Main.INICIOFragment">
 
         <ScrollView
@@ -22,7 +18,10 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
 
                 <TextView
                     android:id="@+id/tituloAyuda"
@@ -83,43 +82,95 @@
                     android:background="#777" />
 
                 <TextView
-                    android:id="@+id/titulo_Redondeo"
+                    android:id="@+id/titulo_operaciones_aritmeticas"
                     style="@style/Titulos"
                     android:layout_below="@id/thirdDivider"
-                    android:text="Redondeos" />
+                    android:text="@string/operaciones_aritmeticas" />
 
                 <TextView
-                    android:id="@id/cuerpoAyuda_Redondeo"
+                    android:id="@+id/cuerpo_ayuda_operaciones"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/titulo_Redondeo"
-                    android:layout_marginTop="1dp"
-                    android:text="@string/texto_ayuda_redondeo" />
+                    android:layout_below="@id/titulo_operaciones_aritmeticas"
+                    style="@style/Cuerpos"
+                    android:text="@string/texto_ayuda_operaciones_aritmeticas" />
 
 
                 <View
                     android:id="@+id/fourthdivider"
                     android:layout_width="fill_parent"
                     android:layout_height="2dp"
-                    android:layout_alignBottom="@+id/cuerpoAyuda_Redondeo"
-                    android:layout_marginBottom="-10dp"
+                    android:layout_alignBottom="@+id/cuerpo_ayuda_operaciones"
                     android:background="#777" />
 
                 <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/titulo_ayuda_redondeo"
+                    style="@style/Titulos"
                     android:layout_below="@+id/fourthdivider"
-                    android:layout_marginTop="12dp"
-                    android:text="TextView5" />
+                    android:text="@string/redondeo" />
 
                 <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView5"
-                    android:layout_marginTop="36dp"
-                    android:text="TextView4" />
+                    android:id="@+id/cuerpo_ayuda_redondeo"
+                    android:layout_below="@+id/titulo_ayuda_redondeo"
+                    style="@style/Cuerpos"
+                    android:text="@string/texto_ayuda_redondeo" />
+
+                <View
+                    android:id="@+id/fifthDivider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/cuerpo_ayuda_redondeo"
+                    android:background="#777" />
+
+                <TextView
+                    android:id="@+id/titulo_ayuda_generador_crc"
+                    android:layout_below="@+id/fifthDivider"
+                    style="@style/Titulos"
+                    android:text="@string/generador_crc"/>
+
+                <TextView
+                    android:id="@+id/cuerpo_ayuda_generador_crc"
+                    android:layout_below="@+id/titulo_ayuda_generador_crc"
+                    style="@style/Cuerpos"
+                    android:text="@string/texto_ayuda_generador_crc"/>
+
+                <View
+                    android:id="@+id/sixthDivider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/cuerpo_ayuda_generador_crc"
+                    android:background="#777"/>
+
+                <TextView
+                    android:id="@+id/titulo_ayuda_verificador_crc"
+                    android:layout_below="@+id/sixthDivider"
+                    style="@style/Titulos"
+                    android:text="@string/verificador_crc"/>
+
+                <TextView
+                    android:id="@+id/cuerpo_ayuda_verificador_crc"
+                    android:layout_below="@+id/titulo_ayuda_verificador_crc"
+                    style="@style/Cuerpos"
+                    android:text="@string/texto_ayuda_verificador_crc"/>
+
+                <View
+                    android:id="@+id/seventhDivider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/cuerpo_ayuda_verificador_crc"
+                    android:background="#777"/>
+
+                <TextView
+                    android:id="@+id/titulo_ayuda_hamming"
+                    android:layout_below="@+id/seventhDivider"
+                    style="@style/Titulos"
+                    android:text="@string/hamming"/>
+
+                <TextView
+                    android:id="@+id/cuerpos_ayuda_hamming"
+                    android:layout_below="@+id/titulo_ayuda_hamming"
+                    style="@style/Cuerpos"
+                    android:text="@string/texto_ayuda_hamming"/>
 
             </RelativeLayout>
         </ScrollView>

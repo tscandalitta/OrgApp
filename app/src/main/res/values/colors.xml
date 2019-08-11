@@ -5,7 +5,7 @@
     <color name="colorAccent">#700202</color>
 
 
-    <color name="darkColorPrimary">#1e2756</color>
-    <color name="darkColorPrimaryDark">#141831</color>
-    <color name="darkColorAccent">#2aac4b</color>
+    <color name="darkColorPrimary">#8C16BB</color>
+    <color name="darkColorPrimaryDark">#6D218D</color>
+    <color name="darkColorAccent">#098F47</color>
 </resources>

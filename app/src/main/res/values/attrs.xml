@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="mainColor" format="reference" />
-    <attr name="mainDarkColor" format="reference" />
+    <attr name="color_texto_crc" format="reference"/>
 </resources>

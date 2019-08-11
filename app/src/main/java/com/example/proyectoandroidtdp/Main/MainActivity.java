@@ -26,7 +26,7 @@ import com.example.proyectoandroidtdp.OperacionesAritmeticas.OperacionAritmetica
 import com.example.proyectoandroidtdp.R;
 import com.example.proyectoandroidtdp.Redondeo.RedondeoFragment;
 import com.example.proyectoandroidtdp.SistemasDeRepresentacion.SistemasDeRepresentacionFragment;
-import com.example.proyectoandroidtdp.VRC_LRC.VRCLRCFragment;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -127,9 +127,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_cambio_de_base:
                 fragmentNuevo = new CambioDeBaseFragment();
                 break;
-            case R.id.nav_lrc_vrc:
-                fragmentNuevo = new VRCLRCFragment();
-                break;
+
             case R.id.nav_crc:
                 fragmentNuevo = new CRCFragment();
                 break;

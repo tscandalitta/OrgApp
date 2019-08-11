@@ -11,6 +11,7 @@
     <string name="rc">RC</string>
     <string name="lrc_vrc">LRC y VRC</string>
     <string name="crc">CRC</string>
+    <string name="generador_crc">Generador CRC</string>
     <string name="correccion_de_errores">Corrección de Errores</string>
     <string name="hamming">Hamming 3 y 4</string>
     <string name="deteccion_de_errores">Detección de Errores</string>
@@ -20,6 +21,7 @@
     <string name="operaciones_aritmeticas">Operaciones Aritmeticas</string>
     <string name="sistemas_de_representacion">Sistemas de Representación</string>
     <string name="aritmetica">Aritmética</string>
+    <string name="verificador_crc">Verificador CRC</string>
 
     <string-array name="arraySpinner">
         <item>BIN</item>
@@ -54,11 +56,25 @@
     <string name="texto_ayuda_sistemas_de_representacion">* Seleccione la base de origen y el sistema
         de representación en la cual desea ingresar el número a convertir. La aplicación solo
         convierte números enteros. Podrá visualizar el número en las diferentes representaciones\n</string>
-    <string name="texto_ayuda_redondeo">*Ingrese el numero en la base que desee y la precision deseada. La aplicacion por el momento mostrara el numero truncado
 
+    <string name="texto_ayuda_operaciones_aritmeticas">* Seleccione la base de origen y el sistema de representacion en
+        el cual desea realizar la operacion e ingrese los operandos.\n* Ambos operandos deberan ser de igual longitud.\n* En
+        caso que se produzca overflow, se le notificará.\n
     </string>
 
+    <string name="texto_ayuda_redondeo">* Ingrese un numero binario y los digitos de precision,luego presione el boton "Redondear". Se le mostrará
+    el numero resultante utilizando los distintos redondeos.\n</string>
 
+    <string name="texto_ayuda_rangos">* Ingrese la cantidad de bits y presione el boton "Calcular", se le mostrarán los rangos corresponientes
+    a cada sistema de representacion</string>
+
+    <string name="texto_ayuda_generador_crc">* Ingrese el mensaje a transmitir y el polinomio generador a utilizar, luego presione el boton "Calcular CRC" y se le mostrara el
+        mensaje a transmitir.\n* Los bits de redundancia seran mostrados en un color distinto.\n</string>
+
+    <string name="texto_ayuda_verificador_crc">* Ingrese el mensaje recibido y el polinomio generador a utilizar, luego presione el botón "Verificar" y se le
+    mostrará si el mensaje es recibido correctamente.\n</string>
+
+    <string name="texto_ayuda_hamming">* Ingrese los bits de datos a transmitir y se le mostrará en codigo hamming basico y extendido el mensaje a transmitir. \n</string>
 
 
     <string name="informacion_inicio">Esta aplicación fue diseñada como parte del final de TDP -
@@ -81,5 +97,4 @@
     <string name="numero">Número</string>
     <string name="precision">Precisión</string>
     <string name="redondear">redondear</string>
-
 </resources>
