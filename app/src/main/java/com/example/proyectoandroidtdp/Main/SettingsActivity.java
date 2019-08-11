@@ -46,8 +46,6 @@ public class SettingsActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Settings");
         actionBar.setDisplayHomeAsUpEnabled(true);
-
-
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
@@ -64,13 +62,11 @@ public class SettingsActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();
-
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event){
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
         finish();
         return true;
     }
-
 }

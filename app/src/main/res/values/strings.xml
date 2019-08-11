@@ -97,4 +97,6 @@
     <string name="numero">Número</string>
     <string name="precision">Precisión</string>
     <string name="redondear">redondear</string>
+    <string name="tema_oscuro">Tema oscuro</string>
+
 </resources>
