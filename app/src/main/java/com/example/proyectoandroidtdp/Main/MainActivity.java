@@ -125,7 +125,6 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_cambio_de_base:
                 fragmentNuevo = new CambioDeBaseFragment();
                 break;
-
             case R.id.nav_crc:
                 fragmentNuevo = new CRCFragment();
                 break;

@@ -31,8 +31,7 @@ public class ActivityAyuda extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
-        Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivityForResult(myIntent, 0);
+        finish();
         return true;
     }
 
