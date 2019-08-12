@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="color_texto_crc">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.Dark" parent="Theme.AppCompat">
@@ -14,6 +15,7 @@
         <item name="colorPrimaryDark">@color/darkColorPrimaryDark</item>
         <item name="colorAccent">@color/darkColorAccent</item>
         <item name="android:textColor">#eeee</item>
+        <item name="color_texto_crc">@color/darkColorPrimary</item>
 
     </style>
 

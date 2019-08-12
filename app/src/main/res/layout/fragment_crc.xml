@@ -81,8 +81,8 @@
             android:layout_width="123dp"
             android:layout_height="38dp"
             android:layout_marginTop="8dp"
-            android:textColor="#811C1C"
             android:textSize="18sp"
+            android:textColor="?attr/color_texto_crc"
             app:layout_constraintStart_toEndOf="@+id/txtCRC1"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
