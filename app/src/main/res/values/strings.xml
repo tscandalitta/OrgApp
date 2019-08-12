@@ -79,11 +79,10 @@
 
     <string name="informacion_inicio">Esta aplicación fue diseñada como parte del final de TDP -
         2018\n\nAutores:
-        \nTomas Scandalitta	 111028\nMaximiliano Montenegro	 118190\nHorus Moro 117724</string>
+        \nTomás Scandalitta	 111028\nMaximiliano Montenegro	 118190\nHorus Moro 117724</string>
 
     <string name="contacto">
-        Cualquier mejora, sugerencia o fallo encontrado puede contactarse a
-        través del correo unsorgapp@gmail.com
+        Si encontrás una falla o querés darnos una sugerencia o crítica, contactanos unsorgapp@gmail.com
     </string>
     <string name="par">Par</string>
     <string name="impar">Impar</string>
