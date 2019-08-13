@@ -11,12 +11,24 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
         conversor = new Conversor();
     }
 
-    public String getHamming3(String msj){
-        return conversor.arrayToString(calcularHamming3(msj));
+    public String getHamming3(String msg){
+        return conversor.arrayToString(calcularHamming3(msg));
     }
 
-    public String getHamming4(String msj){
-        return conversor.arrayToString(calcularHamming4(msj));
+    public String getHamming4(String msg){
+        return conversor.arrayToString(calcularHamming4(msg));
+    }
+
+    public int[] bitsCodigo(String msg) {
+        int[] arr = conversor.stringToArray(msg);
+        int bitsCodigo = 0;
+        for(int i = 1; i < arr.length; i*=2)
+            bitsCodigo++;
+        int[] bits = new int[bitsCodigo];
+        int pos = 0;
+        for(int i = 1; i < arr.length; i*=2)
+            bits[pos++] = arr[i-1];
+        return bits;
     }
 
     private int[] calcularHamming3(String mensaje){

@@ -17,7 +17,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.proyectoandroidtdp.CRC.CRCFragment;
+import com.example.proyectoandroidtdp.CRC.GenerarCRCFragment;
+import com.example.proyectoandroidtdp.CRC.VerificarCRCFragment;
 import com.example.proyectoandroidtdp.CambioDeBase.CambioDeBaseFragment;
 import com.example.proyectoandroidtdp.Hamming.HammingFragment;
 import com.example.proyectoandroidtdp.OperacionesAritmeticas.OperacionAritmeticaFragment;
@@ -72,9 +73,6 @@ public class MainActivity extends AppCompatActivity
                 startActivity(cambioDeActivity);
             }
         });
-
-
-
     }
 
 
@@ -125,8 +123,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_cambio_de_base:
                 fragmentNuevo = new CambioDeBaseFragment();
                 break;
-            case R.id.nav_crc:
-                fragmentNuevo = new CRCFragment();
+            case R.id.nav_generar_crc:
+                fragmentNuevo = new GenerarCRCFragment();
+                break;
+            case R.id.nav_verificar_crc:
+                fragmentNuevo = new VerificarCRCFragment();
                 break;
             case R.id.nav_hamming:
                 fragmentNuevo = new HammingFragment();

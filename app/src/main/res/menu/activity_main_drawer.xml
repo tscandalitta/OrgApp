@@ -24,24 +24,19 @@
         </menu>
     </item>
 
-    <item android:title="@string/deteccion_de_errores">
+    <item android:title="@string/deteccion_y_correcion_de_errores">
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_crc"
-                    android:title="@string/crc" />
-            </group>
-        </menu>
-    </item>
-
-    <item android:title="@string/correccion_de_errores">
-        <menu>
-            <group android:checkableBehavior="single">
+                    android:id="@+id/nav_generar_crc"
+                    android:title="@string/generar_crc" />
+                <item
+                    android:id="@+id/nav_verificar_crc"
+                    android:title="@string/verificar_crc" />
                 <item
                     android:id="@+id/nav_hamming"
                     android:title="@string/hamming" />
             </group>
-
         </menu>
     </item>
 
