@@ -1,2 +1,12 @@
 *.bin
 *.lock
+.idea
+/gradle
+.gradle
+/gradle
+/.idea
+build.gradle
+local.properties
+settings.gradle
+gradlew
+gradlew.bat
