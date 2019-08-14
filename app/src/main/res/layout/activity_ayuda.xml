@@ -19,9 +19,9 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
 
                 <TextView
                     android:id="@+id/tituloAyuda"
@@ -171,6 +171,27 @@
                     android:layout_below="@+id/titulo_ayuda_redondeo"
                     style="@style/Cuerpos"
                     android:text="@string/texto_ayuda_redondeo" />
+
+                <View
+                    android:id="@+id/eightDivider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/cuerpos_ayuda_hamming"
+                    android:background="#777"/>
+
+                <TextView
+                    android:id="@+id/titulo_generador_rangos"
+                    android:layout_below="@+id/eightDivider"
+                    style="@style/Titulos"
+                    android:text="@string/generador_de_rangos"/>
+
+                <TextView
+                    android:id="@+id/cuerpo_ayuda_generador_rangos"
+                    android:layout_below="@+id/titulo_generador_rangos"
+                    style="@style/Cuerpos"
+                    android:text="@string/cuerpo_ayuda_generador_rangos"/>
+
+
 
             </RelativeLayout>
         </ScrollView>

@@ -24,6 +24,11 @@
     <string name="aritmetica">Aritmética</string>
     <string name="verificador_crc">Verificador CRC</string>
 
+    <string name="generador_de_rangos">Generador de Rangos</string>
+
+    <string name="cuerpo_ayuda_generador_rangos">* Ingrese la cantidad de bits disponibles y se le mostrará los diferentes
+    rangos con su correspondiente sistema de representacion.\n* La cantidad de bits disponibles tendra que ser mayor a dos.\n</string>
+
     <string-array name="arraySpinner">
         <item>BIN</item>
         <item>OCT</item>

@@ -6,6 +6,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/txtRedondeoBiased"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="76dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRedondeoAumentacion" />
+
+    <TextView
+        android:id="@+id/txtLabelAumentacion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="AUMENTACION"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelTruncado" />
+
+    <TextView
+        android:id="@+id/txtRedondeoAumentacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="76dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRedondeoTruncado" />
+
+    <TextView
+        android:id="@+id/txtLabelTruncado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:text="TRUNCADO"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRedondear" />
+
     <EditText
         android:id="@+id/txtNumeroARedondear"
         android:layout_width="0dp"
@@ -45,23 +87,23 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNumeroARedondear" />
 
     <TextView
-        android:id="@+id/txtLabelTruncado"
+        android:id="@+id/txtLabelProximidadBiased"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:text="TRUNCADO"
+        android:layout_marginTop="24dp"
+        android:text="PROXIMIDAD BIASED"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRedondear" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelAumentacion2" />
 
     <TextView
         android:id="@+id/txtRedondeoTruncado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
+        android:layout_marginEnd="76dp"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/txtLabelTruncado"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRedondear" />
 </android.support.constraint.ConstraintLayout>

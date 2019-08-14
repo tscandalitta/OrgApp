@@ -22,6 +22,7 @@ import com.example.proyectoandroidtdp.CRC.VerificarCRCFragment;
 import com.example.proyectoandroidtdp.CambioDeBase.CambioDeBaseFragment;
 import com.example.proyectoandroidtdp.Hamming.GenerarHammingFragment;
 import com.example.proyectoandroidtdp.Hamming.VerificarHammingFragment;
+import com.example.proyectoandroidtdp.GeneradorRangos.RangosFragment;
 import com.example.proyectoandroidtdp.OperacionesAritmeticas.OperacionAritmeticaFragment;
 import com.example.proyectoandroidtdp.R;
 import com.example.proyectoandroidtdp.Redondeo.RedondeoFragment;
@@ -152,6 +153,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_redondeo:
                 getSupportActionBar().setTitle(R.string.redondeo);
                 fragmentNuevo = new RedondeoFragment();
+                break;
+            case R.id.nav_rangos:
+                fragmentNuevo = new RangosFragment();
+                break;
         }
 
         fragmentmanager.beginTransaction().replace(R.id.contenedor,fragmentNuevo).commit();
