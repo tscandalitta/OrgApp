@@ -3,7 +3,7 @@
 .idea
 /gradle
 .gradle
-/gradle
+/.gradle
 /.idea
 build.gradle
 local.properties
