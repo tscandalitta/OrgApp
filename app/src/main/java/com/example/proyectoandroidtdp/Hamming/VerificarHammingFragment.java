@@ -77,14 +77,15 @@ public class VerificarHammingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 paqueteRecibido = txtPaquete.getText().toString();
-                if(politica == 0) {//Se selecciono hamming 3
-                    txtConclusion1.setText(generador.verificarHamming3(paqueteRecibido, 0));
-                    txtConclusion2.setText(generador.verificarHamming3(paqueteRecibido, 1));
-                }
-                else {//Si selecciono hamming 4
-                    txtConclusion1.setText(generador.verificarHamming4(paqueteRecibido, 0));
-                    txtConclusion2.setText(generador.verificarHamming4(paqueteRecibido, 1));
-                }
+                if(paqueteRecibido.length() > 0)
+                    if(politica == 0) {//Se selecciono hamming 3
+                        txtConclusion1.setText(generador.verificarHamming3(paqueteRecibido, 0));
+                        txtConclusion2.setText(generador.verificarHamming3(paqueteRecibido, 1));
+                    }
+                    else {//Si selecciono hamming 4
+                        txtConclusion1.setText(generador.verificarHamming4(paqueteRecibido, 0));
+                        txtConclusion2.setText(generador.verificarHamming4(paqueteRecibido, 1));
+                    }
             }
         });
 
