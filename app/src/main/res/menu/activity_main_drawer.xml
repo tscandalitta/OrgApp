@@ -34,8 +34,11 @@
                     android:id="@+id/nav_verificar_crc"
                     android:title="@string/verificar_crc" />
                 <item
-                    android:id="@+id/nav_hamming"
-                    android:title="@string/hamming" />
+                    android:id="@+id/nav_generar_hamming"
+                    android:title="@string/generar_hamming" />
+                <item
+                    android:id="@+id/nav_verificar_hamming"
+                    android:title="@string/verificar_hamming" />
             </group>
         </menu>
     </item>
