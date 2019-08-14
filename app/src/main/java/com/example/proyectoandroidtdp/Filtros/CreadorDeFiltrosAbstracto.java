@@ -5,6 +5,7 @@ import android.text.InputFilter;
 public interface CreadorDeFiltrosAbstracto {
 
     InputFilter getFiltroBinarioFraccionario();
+    InputFilter getFiltroBinarioFraccionarioSignado();
     InputFilter getFiltroOctalFraccionario();
     InputFilter getFiltroDecimalFraccionario();
     InputFilter getFiltroHexaFraccionario();

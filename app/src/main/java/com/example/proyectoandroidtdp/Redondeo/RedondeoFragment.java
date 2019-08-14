@@ -3,12 +3,15 @@ package com.example.proyectoandroidtdp.Redondeo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.InputFilter;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltros;
+import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltrosAbstracto;
 import com.example.proyectoandroidtdp.R;
 
 public class RedondeoFragment extends Fragment {
@@ -34,10 +37,15 @@ public class RedondeoFragment extends Fragment {
 
         btnRedondear = view.findViewById(R.id.btnRedondear);
 
-        InputFilter[] filtroNumero = {new InputFilter.LengthFilter(20)};
+        CreadorDeFiltrosAbstracto creadorDeFiltros = new CreadorDeFiltros();
+        InputFilter[] filtroNumero = {creadorDeFiltros.getFiltroBinarioFraccionarioSignado(), new InputFilter.LengthFilter(20)};
         InputFilter[] filtroPrecision = {new InputFilter.LengthFilter(2)};
         txtNumero.setFilters(filtroNumero);
         txtPrecision.setFilters(filtroPrecision);
+
+        int tipoDeEntrada = (InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED |
+                InputType.TYPE_NUMBER_FLAG_DECIMAL);
+        txtNumero.setInputType(tipoDeEntrada);
 
         btnRedondear.setOnClickListener(new View.OnClickListener() {
             @Override

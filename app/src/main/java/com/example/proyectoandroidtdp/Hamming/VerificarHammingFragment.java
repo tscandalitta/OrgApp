@@ -2,6 +2,7 @@ package com.example.proyectoandroidtdp.Hamming;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltros;
+import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltrosAbstracto;
 import com.example.proyectoandroidtdp.R;
 
 public class VerificarHammingFragment extends Fragment {
@@ -38,6 +41,10 @@ public class VerificarHammingFragment extends Fragment {
         txtConclusion1 = view.findViewById(R.id.txtHammingResult1);
         txtConclusion2 = view.findViewById(R.id.txtHammingResult2);
 
+        CreadorDeFiltrosAbstracto creadorDeFiltros = new CreadorDeFiltros();
+        InputFilter[] filtros = {creadorDeFiltros.getFiltroBinarioEntero(), new InputFilter.LengthFilter(21)};
+        txtPaquete.setFilters(filtros);
+
         String [] hammings = getResources().getStringArray(R.array.arraySpinnerHamming);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getActivity().getApplicationContext(),
                 R.layout.item_spinner, R.id.texto_spinner,hammings);
@@ -50,9 +57,8 @@ public class VerificarHammingFragment extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 TextView selectedText = parent.getChildAt(0).findViewById(R.id.texto_spinner);
-                if (selectedText != null) {
+                if (selectedText != null)
                     selectedText.setTextColor(txtPaquete.getCurrentTextColor());
-                }
 
                 switch(position){
                     case 0: //Hamming 3
@@ -69,7 +75,6 @@ public class VerificarHammingFragment extends Fragment {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 

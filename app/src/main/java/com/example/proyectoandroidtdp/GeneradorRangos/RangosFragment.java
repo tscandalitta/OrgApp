@@ -35,11 +35,10 @@ public class RangosFragment extends Fragment {
 
         CreadorDeFiltros creadorDeFiltros = new CreadorDeFiltros();
 
-        InputFilter[] arr = {creadorDeFiltros.getFiltroDecimalEntero(), new InputFilter.LengthFilter(2)};
-        cantidadBits.setFilters(arr);
+        InputFilter[] filtros = {creadorDeFiltros.getFiltroDecimalEntero(), new InputFilter.LengthFilter(2)};
+        cantidadBits.setFilters(filtros);
 
         calculadorRangos = new CalculadorRangos();
-
 
         cantidadBits.addTextChangedListener(new TextWatcher() {
             @Override
@@ -50,8 +49,7 @@ public class RangosFragment extends Fragment {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if(s.length()!=0 && Integer.parseInt(s.toString())>=2){
-
+                if(s.length() > 0 && Integer.parseInt(s.toString()) >= 2){
                     rangoSM.setText(calculadorRangos.getRangoSM(Integer.parseInt(s.toString())));
                     rangoRC.setText(calculadorRangos.getRangoRC(Integer.parseInt(s.toString())));
                     rangoDRC.setText(calculadorRangos.getRangoDRC(Integer.parseInt(s.toString())));
