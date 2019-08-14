@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity
                 fragmentNuevo = new VerificarHammingFragment();
                 break;
             case R.id.nav_inicio:
-                getSupportActionBar().setTitle("OrgApp");
+                getSupportActionBar().setTitle(R.string.app_name);
                 fragmentNuevo = new INICIOFragment();
                 break;
             case R.id.nav_operaciones_Arimetica:

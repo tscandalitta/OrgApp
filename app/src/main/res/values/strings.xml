@@ -13,8 +13,8 @@
     <string name="generar_crc">Generar CRC</string>
     <string name="verificar_crc">Verificar CRC</string>
     <string name="generador_crc">Generador CRC</string>
-    <string name="generar_hamming">Generar Hamming 3 y 4</string>
-    <string name="verificar_hamming">Verificar Hamming 3 y 4</string>
+    <string name="generar_hamming">Generar código Hamming</string>
+    <string name="verificar_hamming">Verificar código Hamming</string>
     <string name="deteccion_y_correcion_de_errores">Detección y corrección de Errores</string>
     <string name="cambio_de_base">Cambio de Base</string>
     <string name="num_x">Numero X</string>
