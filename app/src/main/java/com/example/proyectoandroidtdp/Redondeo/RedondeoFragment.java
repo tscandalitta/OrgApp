@@ -17,7 +17,7 @@ import com.example.proyectoandroidtdp.R;
 public class RedondeoFragment extends Fragment {
 
     RedondeadorAbstracto redondeador;
-    TextView txtNumero, txtPrecision, txtTruncado, txtAumentacion,txtBiased;
+    TextView txtNumero, txtPrecision, txtTruncado, txtAumentacion, txtBiased, txtUnbiased;
     Button btnRedondear;
     String numeroOriginal, numeroRedondeado, precision;
 
@@ -34,7 +34,7 @@ public class RedondeoFragment extends Fragment {
         txtTruncado = view.findViewById(R.id.txtRedondeoTruncado);
         txtAumentacion = view.findViewById(R.id.txtRedondeoAumentacion);
         txtBiased = view.findViewById(R.id.txtRedondeoBiased);
-
+        txtUnbiased = view.findViewById(R.id.txtRedondeoUnbiased);
         btnRedondear = view.findViewById(R.id.btnRedondear);
 
         CreadorDeFiltrosAbstracto creadorDeFiltros = new CreadorDeFiltros();
@@ -56,11 +56,12 @@ public class RedondeoFragment extends Fragment {
                     numeroRedondeado = redondeador.redondeoTruncado(numeroOriginal, precision);
                     String numeroAumentacion = redondeador.redondeoAumentacion(numeroOriginal, precision);
                     String numeroBiased = redondeador.redondeoBiased(numeroOriginal,precision);
+                    String numeroUnbiased = redondeador.redondeoUnbiased(numeroOriginal,precision);
 
                     txtTruncado.setText(numeroRedondeado);
                     txtAumentacion.setText(numeroAumentacion);
                     txtBiased.setText(numeroBiased);
-
+                    txtUnbiased.setText(numeroUnbiased);
                 }
             }
         });
