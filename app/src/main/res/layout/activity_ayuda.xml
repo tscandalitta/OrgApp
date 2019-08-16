@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/contenedorInfo"
     android:layout_width="match_parent"
@@ -14,14 +13,16 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
 
                 <TextView
                     android:id="@+id/tituloAyuda"
@@ -33,6 +34,7 @@
                     style="@style/Cuerpos"
                     android:layout_below="@id/tituloAyuda"
                     android:text="@string/texto_ayuda" />
+
 
                 <View
                     android:id="@+id/first"
@@ -52,6 +54,7 @@
                     style="@style/Cuerpos"
                     android:layout_below="@id/tituloAyudaConvertidor"
                     android:text="@string/texto_ayuda_cambio_de_base" />
+
 
                 <View
                     android:id="@+id/secondDivider"
@@ -74,6 +77,7 @@
                     android:layout_below="@id/titulo_ayuda_sistemas_representacion"
                     android:text="@string/texto_ayuda_sistemas_de_representacion" />
 
+
                 <View
                     android:id="@+id/thirdDivider"
                     android:layout_width="fill_parent"
@@ -89,112 +93,133 @@
 
                 <TextView
                     android:id="@+id/cuerpo_ayuda_operaciones"
+                    style="@style/Cuerpos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/titulo_operaciones_aritmeticas"
-                    style="@style/Cuerpos"
                     android:text="@string/texto_ayuda_operaciones_aritmeticas" />
 
 
                 <View
-                    android:id="@+id/fourthdivider"
+                    android:id="@+id/fourthDivider"
                     android:layout_width="fill_parent"
                     android:layout_height="2dp"
-                    android:layout_alignBottom="@+id/cuerpo_ayuda_operaciones"
+                    android:layout_below="@+id/cuerpo_ayuda_operaciones"
                     android:background="#777" />
 
                 <TextView
-                    android:id="@+id/titulo_ayuda_generador_crc"
-                    android:layout_below="@+id/fifthDivider"
+                    android:id="@+id/titulo_generador_rangos"
                     style="@style/Titulos"
-                    android:text="@string/generador_crc"/>
+                    android:layout_below="@+id/fourthDivider"
+                    android:text="@string/generar_rangos" />
 
                 <TextView
-                    android:id="@+id/cuerpo_ayuda_generador_crc"
-                    android:layout_below="@+id/titulo_ayuda_generador_crc"
+                    android:id="@+id/cuerpo_ayuda_generador_rangos"
                     style="@style/Cuerpos"
-                    android:text="@string/texto_ayuda_generador_crc"/>
+                    android:layout_below="@+id/titulo_generador_rangos"
+                    android:text="@string/cuerpo_ayuda_generar_rangos" />
+
 
                 <View
                     android:id="@+id/fifthDivider"
                     android:layout_width="fill_parent"
                     android:layout_height="2dp"
-                    android:layout_below="@id/cuerpo_ayuda_redondeo"
+                    android:layout_below="@id/cuerpo_ayuda_generador_rangos"
                     android:background="#777" />
 
                 <TextView
-                    android:id="@+id/titulo_ayuda_verificador_crc"
-                    android:layout_below="@+id/sixthDivider"
+                    android:id="@+id/titulo_ayuda_generador_crc"
                     style="@style/Titulos"
-                    android:text="@string/verificador_crc"/>
+                    android:layout_below="@+id/fifthDivider"
+                    android:text="@string/generar_crc" />
 
                 <TextView
-                    android:id="@+id/cuerpo_ayuda_verificador_crc"
-                    android:layout_below="@+id/titulo_ayuda_verificador_crc"
+                    android:id="@+id/cuerpo_ayuda_generador_crc"
                     style="@style/Cuerpos"
-                    android:text="@string/texto_ayuda_verificador_crc"/>
+                    android:layout_below="@+id/titulo_ayuda_generador_crc"
+                    android:text="@string/texto_ayuda_generar_crc" />
+
 
                 <View
                     android:id="@+id/sixthDivider"
                     android:layout_width="fill_parent"
                     android:layout_height="2dp"
                     android:layout_below="@id/cuerpo_ayuda_generador_crc"
-                    android:background="#777"/>
+                    android:background="#777" />
 
                 <TextView
-                    android:id="@+id/titulo_ayuda_hamming"
-                    android:layout_below="@+id/seventhDivider"
+                    android:id="@+id/titulo_ayuda_verificador_crc"
                     style="@style/Titulos"
-                    android:text="@string/generar_hamming"/>
+                    android:layout_below="@+id/sixthDivider"
+                    android:text="@string/verificar_crc" />
 
                 <TextView
-                    android:id="@+id/cuerpos_ayuda_hamming"
-                    android:layout_below="@+id/titulo_ayuda_hamming"
+                    android:id="@+id/cuerpo_ayuda_verificador_crc"
                     style="@style/Cuerpos"
-                    android:text="@string/texto_ayuda_hamming"/>
+                    android:layout_below="@+id/titulo_ayuda_verificador_crc"
+                    android:text="@string/texto_ayuda_verificar_crc" />
+
 
                 <View
                     android:id="@+id/seventhDivider"
                     android:layout_width="fill_parent"
                     android:layout_height="2dp"
                     android:layout_below="@id/cuerpo_ayuda_verificador_crc"
-                    android:background="#777"/>
+                    android:background="#777" />
 
                 <TextView
-                    android:id="@+id/titulo_ayuda_redondeo"
+                    android:id="@+id/titulo_ayuda_generar_hamming"
                     style="@style/Titulos"
-                    android:layout_below="@+id/fourthdivider"
-                    android:text="@string/redondeo" />
+                    android:layout_below="@+id/seventhDivider"
+                    android:text="@string/generar_hamming" />
 
                 <TextView
-                    android:id="@+id/cuerpo_ayuda_redondeo"
-                    android:layout_below="@+id/titulo_ayuda_redondeo"
+                    android:id="@+id/cuerpos_ayuda_generar_hamming"
                     style="@style/Cuerpos"
-                    android:text="@string/texto_ayuda_redondeo" />
+                    android:layout_below="@+id/titulo_ayuda_generar_hamming"
+                    android:text="@string/texto_ayuda_generar_hamming" />
+
 
                 <View
                     android:id="@+id/eightDivider"
                     android:layout_width="fill_parent"
                     android:layout_height="2dp"
-                    android:layout_below="@id/cuerpos_ayuda_hamming"
-                    android:background="#777"/>
+                    android:layout_below="@id/cuerpos_ayuda_generar_hamming"
+                    android:background="#777" />
 
                 <TextView
-                    android:id="@+id/titulo_generador_rangos"
-                    android:layout_below="@+id/eightDivider"
+                    android:id="@+id/titulo_ayuda_verificar_hamming"
                     style="@style/Titulos"
-                    android:text="@string/generador_de_rangos"/>
+                    android:layout_below="@+id/eightDivider"
+                    android:text="@string/verificar_hamming" />
 
                 <TextView
-                    android:id="@+id/cuerpo_ayuda_generador_rangos"
-                    android:layout_below="@+id/titulo_generador_rangos"
+                    android:id="@+id/cuerpos_ayuda_verificar_hamming"
                     style="@style/Cuerpos"
-                    android:text="@string/cuerpo_ayuda_generador_rangos"/>
+                    android:layout_below="@+id/titulo_ayuda_verificar_hamming"
+                    android:text="@string/texto_ayuda_verificar_hamming" />
 
 
+                <View
+                    android:id="@+id/ninthDivider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/cuerpos_ayuda_verificar_hamming"
+                    android:background="#777" />
+
+                <TextView
+                    android:id="@+id/titulo_ayuda_redondeo"
+                    style="@style/Titulos"
+                    android:layout_below="@+id/ninthDivider"
+                    android:text="@string/redondear" />
+
+                <TextView
+                    android:id="@+id/cuerpo_ayuda_redondeo"
+                    style="@style/Cuerpos"
+                    android:layout_below="@+id/titulo_ayuda_redondeo"
+                    android:text="@string/texto_ayuda_redondeo" />
 
             </RelativeLayout>
         </ScrollView>
-
     </RelativeLayout>
 </RelativeLayout>
