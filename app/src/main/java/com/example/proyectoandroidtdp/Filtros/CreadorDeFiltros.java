@@ -27,6 +27,21 @@ public class CreadorDeFiltros implements CreadorDeFiltrosAbstracto{
         };
     }
 
+    public InputFilter getFiltroBinarioFraccionarioSignado(){
+        return new InputFilter() {
+            @Override
+            public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+
+                for (int i = start; i < end; i++) {
+                    if (source.charAt(i)<'-' || source.charAt(i)>'1') {
+                        return "";
+                    }
+                }
+                return null;
+            }
+        };
+    }
+
     /**
      * Crea y devuelve un InputFilter para numeros fraccionarios en base 8.
      * @return InputFilter para numeros octales fraccionarios
@@ -64,6 +79,7 @@ public class CreadorDeFiltros implements CreadorDeFiltrosAbstracto{
             }
         };
     }
+
 
     /**
      * Crea y devuelve un InputFilter para numeros fraccionarios en base 16.

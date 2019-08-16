@@ -10,18 +10,24 @@
     <string name="drc">DRC</string>
     <string name="rc">RC</string>
     <string name="lrc_vrc">LRC y VRC</string>
-    <string name="crc">CRC</string>
+    <string name="generar_crc">Generar CRC</string>
+    <string name="verificar_crc">Verificar CRC</string>
     <string name="generador_crc">Generador CRC</string>
-    <string name="correccion_de_errores">Corrección de Errores</string>
-    <string name="hamming">Hamming 3 y 4</string>
-    <string name="deteccion_de_errores">Detección de Errores</string>
+    <string name="generar_hamming">Generar código Hamming</string>
+    <string name="verificar_hamming">Verificar código Hamming</string>
+    <string name="deteccion_y_correcion_de_errores">Detección y corrección de Errores</string>
     <string name="cambio_de_base">Cambio de Base</string>
     <string name="num_x">Numero X</string>
     <string name="num_y">Numero Y</string>
-    <string name="operaciones_aritmeticas">Operaciones Aritmeticas</string>
+    <string name="operaciones_aritmeticas">Operaciones Aritméticas</string>
     <string name="sistemas_de_representacion">Sistemas de Representación</string>
     <string name="aritmetica">Aritmética</string>
     <string name="verificador_crc">Verificador CRC</string>
+
+    <string name="generador_de_rangos">Generador de Rangos</string>
+
+    <string name="cuerpo_ayuda_generador_rangos">* Ingrese la cantidad de bits disponibles y se le mostrará los diferentes
+    rangos con su correspondiente sistema de representacion.\n* La cantidad de bits disponibles tendra que ser mayor a dos.\n</string>
 
     <string-array name="arraySpinner">
         <item>BIN</item>
@@ -34,6 +40,11 @@
         <item>SM</item>
         <item>DRC</item>
         <item>RC</item>
+    </string-array>
+
+    <string-array name="arraySpinnerHamming">
+        <item>Hamming 3</item>
+        <item>Hamming 4</item>
     </string-array>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -49,42 +60,52 @@
     <string name="texto_ayuda">* Aquí podrá encontrar la información necesaria para utilizar esta
         aplicación.\n</string>
 
-    <string name="texto_ayuda_cambio_de_base">* Seleccione la base de origen e ingrese el numero no
+    <string name="texto_ayuda_cambio_de_base">* Seleccione la base de origen e ingrese el número no
         signado a convertir, ya sea entero o fraccionario. Podrá visualizar el número convertido en
-        las demás bases.\n</string>
+        las demás bases.\n
+    </string>
 
     <string name="texto_ayuda_sistemas_de_representacion">* Seleccione la base de origen y el sistema
         de representación en la cual desea ingresar el número a convertir. La aplicación solo
-        convierte números enteros. Podrá visualizar el número en las diferentes representaciones\n</string>
-
-    <string name="texto_ayuda_operaciones_aritmeticas">* Seleccione la base de origen y el sistema de representacion en
-        el cual desea realizar la operacion e ingrese los operandos.\n* Ambos operandos deberan ser de igual longitud.\n* En
-        caso que se produzca overflow, se le notificará.\n
+        convierte números enteros. Podrá visualizar el número en las diferentes representaciones\n
     </string>
 
-    <string name="texto_ayuda_redondeo">* Ingrese un numero binario y los digitos de precision,luego presione el boton "Redondear". Se le mostrará
-    el numero resultante utilizando los distintos redondeos.\n</string>
+    <string name="texto_ayuda_operaciones_aritmeticas">* Seleccione la base de origen y el sistema de
+        representación en el cual desea realizar la operacion e ingrese los operandos.\n* Ambos
+        operandos deben ser de igual longitud.\n* En caso de producirse overflow, se le notificará.\n
+    </string>
 
-    <string name="texto_ayuda_rangos">* Ingrese la cantidad de bits y presione el boton "Calcular", se le mostrarán los rangos corresponientes
-    a cada sistema de representacion</string>
+    <string name="texto_ayuda_redondeo">* Ingrese un número binario y los dígitos de precision, luego
+        presione el boton "Redondear". Se le mostrará el número resultante utilizando los distintos
+        redondeos.\n
+    </string>
 
-    <string name="texto_ayuda_generador_crc">* Ingrese el mensaje a transmitir y el polinomio generador a utilizar, luego presione el boton "Calcular CRC" y se le mostrara el
-        mensaje a transmitir.\n* Los bits de redundancia seran mostrados en un color distinto.\n</string>
+    <string name="texto_ayuda_rangos">* Ingrese la cantidad de bits y presione el boton "Calcular",
+        se le mostrarán los rangos corresponientes a cada sistema de representación.
+    </string>
 
-    <string name="texto_ayuda_verificador_crc">* Ingrese el mensaje recibido y el polinomio generador a utilizar, luego presione el botón "Verificar" y se le
-    mostrará si el mensaje es recibido correctamente.\n</string>
+    <string name="texto_ayuda_generador_crc">* Ingrese el mensaje a transmitir y el polinomio generador
+        a utilizar, luego presione el boton "Calcular CRC" y se le mostrará el mensaje a transmitir.
+        \n* Los bits de redundancia serán mostrados en un color distinto.\n
+    </string>
 
-    <string name="texto_ayuda_hamming">* Ingrese los bits de datos a transmitir y se le mostrará en codigo hamming basico y extendido el mensaje a transmitir. \n</string>
+    <string name="texto_ayuda_verificador_crc">* Ingrese el mensaje recibido y el polinomio generador
+        a utilizar, luego presione el botón "Verificar" y se le mostrará si el mensaje fue recibido
+        correctamente.\n
+    </string>
 
+    <string name="texto_ayuda_hamming">* Ingrese los bits de datos a transmitir y se le mostrará su
+        codificación tanto en hamming basico como extendido.\n
+    </string>
 
     <string name="informacion_inicio">Esta aplicación fue diseñada como parte del final de TDP -
-        2018\n\nAutores:
-        \nTomas Scandalitta	 111028\nMaximiliano Montenegro	 118190\nHorus Moro 117724</string>
+        2018\n\nDesarrolladores:\nTomás Scandalitta\nMaximiliano Montenegro\nHorus Moro
+    </string>
 
     <string name="contacto">
-        Cualquier mejora, sugerencia o fallo encontrado puede contactarse a
-        través del correo unsorgapp@gmail.com
+        Si encontrás una falla y/o querés enviar una sugerencia o crítica, contactanos a unsorgapp@gmail.com
     </string>
+
     <string name="par">Par</string>
     <string name="impar">Impar</string>
     <string name="calcular">calcular</string>

@@ -17,9 +17,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.proyectoandroidtdp.CRC.CRCFragment;
+import com.example.proyectoandroidtdp.CRC.GenerarCRCFragment;
+import com.example.proyectoandroidtdp.CRC.VerificarCRCFragment;
 import com.example.proyectoandroidtdp.CambioDeBase.CambioDeBaseFragment;
-import com.example.proyectoandroidtdp.Hamming.HammingFragment;
+import com.example.proyectoandroidtdp.Hamming.GenerarHammingFragment;
+import com.example.proyectoandroidtdp.Hamming.VerificarHammingFragment;
+import com.example.proyectoandroidtdp.GeneradorRangos.RangosFragment;
 import com.example.proyectoandroidtdp.OperacionesAritmeticas.OperacionAritmeticaFragment;
 import com.example.proyectoandroidtdp.R;
 import com.example.proyectoandroidtdp.Redondeo.RedondeoFragment;
@@ -72,9 +75,6 @@ public class MainActivity extends AppCompatActivity
                 startActivity(cambioDeActivity);
             }
         });
-
-
-
     }
 
 
@@ -120,25 +120,45 @@ public class MainActivity extends AppCompatActivity
         Fragment fragmentNuevo = null;
         switch (id){
             case R.id.nav_sistemas_de_representacion:
+                getSupportActionBar().setTitle(R.string.sistemas_de_representacion);
                 fragmentNuevo = new SistemasDeRepresentacionFragment();
                 break;
             case R.id.nav_cambio_de_base:
+                getSupportActionBar().setTitle(R.string.cambio_de_base);
                 fragmentNuevo = new CambioDeBaseFragment();
                 break;
-            case R.id.nav_crc:
-                fragmentNuevo = new CRCFragment();
+            case R.id.nav_generar_crc:
+                getSupportActionBar().setTitle(R.string.generar_crc);
+                fragmentNuevo = new GenerarCRCFragment();
                 break;
-            case R.id.nav_hamming:
-                fragmentNuevo = new HammingFragment();
+            case R.id.nav_verificar_crc:
+                getSupportActionBar().setTitle(R.string.verificar_crc);
+                fragmentNuevo = new VerificarCRCFragment();
+                break;
+            case R.id.nav_generar_hamming:
+                getSupportActionBar().setTitle("Generar Hamming");
+                fragmentNuevo = new GenerarHammingFragment();
+                break;
+            case R.id.nav_verificar_hamming:
+                getSupportActionBar().setTitle("Verificar Hamming");
+                fragmentNuevo = new VerificarHammingFragment();
                 break;
             case R.id.nav_inicio:
+                getSupportActionBar().setTitle(R.string.app_name);
                 fragmentNuevo = new INICIOFragment();
                 break;
             case R.id.nav_operaciones_Arimetica:
+                getSupportActionBar().setTitle(R.string.operaciones_aritmeticas);
                 fragmentNuevo = new OperacionAritmeticaFragment();
                 break;
             case R.id.nav_redondeo:
+                getSupportActionBar().setTitle(R.string.redondeo);
                 fragmentNuevo = new RedondeoFragment();
+                break;
+            case R.id.nav_rangos:
+                fragmentNuevo = new RangosFragment();
+                getSupportActionBar().setTitle("Rangos");
+                break;
         }
 
         fragmentmanager.beginTransaction().replace(R.id.contenedor,fragmentNuevo).commit();
