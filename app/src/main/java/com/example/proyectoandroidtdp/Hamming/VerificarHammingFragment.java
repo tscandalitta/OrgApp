@@ -19,13 +19,16 @@ import com.example.proyectoandroidtdp.R;
 
 public class VerificarHammingFragment extends Fragment {
 
+
+    private static final int HAMMING3 = 0;
+    private static final int HAMMING4 = 1;
     GeneradorHammingAbstracto generador;
     EditText txtPaquete;
     Button btnVerificar;
     String paqueteRecibido;
     Spinner spinner;
     TextView txtPolitica1, txtPolitica2, txtConclusion1, txtConclusion2;
-    int politica = 0;
+    int hammingSeleccionado = HAMMING3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,12 +67,12 @@ public class VerificarHammingFragment extends Fragment {
                     case 0: //Hamming 3
                         txtPolitica1.setText("D = 1, C = 1");
                         txtPolitica2.setText("D = 2, C = 0");
-                        politica = 0;
+                        hammingSeleccionado = HAMMING3;
                         break;
                     case 1: //Hamming 4
                         txtPolitica1.setText("D = 2, C = 1");
                         txtPolitica2.setText("D = 3, C = 0");
-                        politica = 1;
+                        hammingSeleccionado = HAMMING4;
                 }
             }
 
@@ -83,13 +86,13 @@ public class VerificarHammingFragment extends Fragment {
             public void onClick(View v) {
                 paqueteRecibido = txtPaquete.getText().toString();
                 if(paqueteRecibido.length() > 0)
-                    if(politica == 0) {//Se selecciono hamming 3
+                    if(hammingSeleccionado == HAMMING3) {
                         txtConclusion1.setText(generador.verificarHamming3(paqueteRecibido, 0));
                         txtConclusion2.setText(generador.verificarHamming3(paqueteRecibido, 1));
                     }
-                    else {//Si selecciono hamming 4
-                        txtConclusion1.setText(generador.verificarHamming4(paqueteRecibido, 0));
-                        txtConclusion2.setText(generador.verificarHamming4(paqueteRecibido, 1));
+                    else {
+                        txtConclusion1.setText(generador.verificarHamming4(paqueteRecibido, 1));
+                        txtConclusion2.setText(generador.verificarHamming4(paqueteRecibido, 0));
                     }
             }
         });

@@ -136,11 +136,11 @@ public class MainActivity extends AppCompatActivity
                 fragmentNuevo = new VerificarCRCFragment();
                 break;
             case R.id.nav_generar_hamming:
-                getSupportActionBar().setTitle(R.string.generar_hamming);
+                getSupportActionBar().setTitle("Generar Hamming");
                 fragmentNuevo = new GenerarHammingFragment();
                 break;
             case R.id.nav_verificar_hamming:
-                getSupportActionBar().setTitle(R.string.verificar_hamming);
+                getSupportActionBar().setTitle("Verificar Hamming");
                 fragmentNuevo = new VerificarHammingFragment();
                 break;
             case R.id.nav_inicio:
@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_rangos:
                 fragmentNuevo = new RangosFragment();
+                getSupportActionBar().setTitle("Rangos");
                 break;
         }
 

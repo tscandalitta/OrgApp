@@ -5,6 +5,9 @@ import com.example.proyectoandroidtdp.Conversor.ConversorAbstracto;
 
 public class GeneradorHamming implements GeneradorHammingAbstracto {
 
+    private static final int D1C1 = 0;
+    private static final int D3C0 = 0;
+
     private ConversorAbstracto conversor;
 
     public GeneradorHamming(){
@@ -34,9 +37,10 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
     public String getBitsMensaje(String msg){
         int[] arr = conversor.stringToArray(msg);
         String toReturn = "";
-        for(int i = 0; i < arr.length; i++)
+        for(int i = 0; i < arr.length - 1; i++)
             if(i != 0 && i != 1 && i != 3 && i != 7 && i != 15)
                 toReturn += arr[i];
+        toReturn += arr[arr.length - 1]; //agrego el ultimo bit aca para evitar bug con paridad en posicion potencia
         return toReturn;
     }
 
@@ -104,53 +108,97 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
         }
         return hamming4;
     }
+
     // 0 corresponde a la politica de correccion simple y deteccion simple.
     // 1 corresponde a la politica de deteccion simple y doble.
-    public String verificarHamming3(String msg,int politica){
+    public String verificarHamming3(String msg, int politica){
         String mensajeRecibido = getBitsMensaje(msg);
         int sindrome;
-        String resultadoHamming;
         int[] bitsCodigoRecibidos = getBitsCodigo(msg);
         String paqueteRecalculado = getHamming3(mensajeRecibido);
         int[] bitsCodigoRecalculados = getBitsCodigo(paqueteRecalculado);
         sindrome = calcularSindrome(bitsCodigoRecibidos,bitsCodigoRecalculados);
 
-        if(sindrome==0)
-            resultadoHamming="NO SE DETECTARON ERRORES";
-        else {
-            resultadoHamming=mensajeHamming(sindrome,politica,mensajeRecibido.length()-1);
-        }
-        return resultadoHamming;
+        return mensajeHamming3(sindrome,politica,mensajeRecibido.length() - 1);
     }
 
-    private String mensajeHamming(int sindrome, int politica, int longitud){
+    public String verificarHamming4(String msg, int politica) {
+        String mensajeRecibidoConParidad = getBitsMensaje(msg);
+        char paridadRecibida = mensajeRecibidoConParidad.charAt(mensajeRecibidoConParidad.length() - 1);
+        String mensajeRecibido = mensajeRecibidoConParidad.substring(0,mensajeRecibidoConParidad.length() - 1);
+        int sindrome;
+        int[] bitsCodigoRecibidos = getBitsCodigo(msg);
+        String paqueteRecalculado = getHamming4(mensajeRecibido);
+        int[] bitsCodigoRecalculados = getBitsCodigo(paqueteRecalculado);
+        char paridadRecalculada = paqueteRecalculado.charAt(paqueteRecalculado.length() - 1);
+        sindrome = calcularSindrome(bitsCodigoRecibidos,bitsCodigoRecalculados);
+
+        return mensajeHamming4(sindrome,politica,mensajeRecibido.length() - 1, paridadRecibida, paridadRecalculada);
+    }
+
+    private String mensajeHamming3(int sindrome, int politica, int longitud){
         String mensaje;
-        if (politica == 0 && sindrome <= longitud)
-            mensaje="SE DETECTO ERROR SIMPLE EN LA POSICION: "+sindrome;
-        else{
-            if (politica == 0 && sindrome > longitud )
-                mensaje="SE DETECTO ERROR, SE DESCONOCE LA LONGITUD DE LA RAFAGA";
-            else{
-                if(politica == 1 && sindrome <= longitud)
-                    mensaje="SE DETECTO ERROR SIMPLE O DOBLE";
+        if(sindrome == 0)
+            mensaje = "No se detectaron errores";
+        else
+            if (politica == D1C1)
+                if(sindrome <= longitud)
+                    mensaje = "Se detectó error simple en la posición " + sindrome;
                 else
-                    mensaje="SE DETECTO ERROR DOBLE";
+                    mensaje = "Se detectó error, se desconoce la longitud de la ráfaga";
+            else //politica = D2C0
+                if(sindrome <= longitud)
+                    mensaje = "Se detectó error simple o doble";
+                else
+                    mensaje = "Se detectó error doble";
+        return  mensaje;
+    }
+    private String mensajeHamming4(int sindrome, int politica, int longitud, int paridadRecibida, int paridadRecalculada){
+        String mensaje;
+        int xorParidad = paridadRecibida ^ paridadRecalculada;
+
+        if(politica == D3C0) {
+            if (sindrome == 0) {
+                if (xorParidad == 0)
+                    mensaje = "No se detectaron errores";
+                else
+                    mensaje = "Se detectó error triple o error en bit de paridad";
+            }
+            else {
+                if (xorParidad == 0)
+                    mensaje = "Se detectó error doble";
+                else
+                    if (sindrome <= longitud)
+                        mensaje = "Se detectó error simple o triple";
+                    else
+                        mensaje = "Se detectó error triple";
             }
         }
-        return  mensaje;
+        else{ //politica = D2C1
+            if (sindrome == 0) {
+                if (xorParidad == 0)
+                    mensaje = "No se detectaron errores";
+                else
+                    mensaje = "Se detectó error en bit de paridad";
+            }
+            else {
+                if (xorParidad == 0)
+                    mensaje = "Se detectó error doble";
+                else
+                    if (sindrome <= longitud)
+                        mensaje = "Se detectó porción de error???????";
+                    else
+                        mensaje = "Se detectó error de longitud mayor a 2";
+            }
+        }
+        return mensaje;
     }
 
     private int calcularSindrome(int [] bitRecibidos, int [] bitsRecalculados){
         String sindromeString = "";
-        for(int i = bitRecibidos.length-1;i>=0;i--)
-            sindromeString += bitRecibidos[i]^bitsRecalculados[i];
+        for(int i = bitRecibidos.length - 1; i >= 0; i--)
+            sindromeString += bitRecibidos[i] ^ bitsRecalculados[i];
         return Integer.parseInt(sindromeString,2);
-
-    }
-
-    @Override
-    public String verificarHamming4(String msg, int politica) {
-        return null;
     }
 }
 
