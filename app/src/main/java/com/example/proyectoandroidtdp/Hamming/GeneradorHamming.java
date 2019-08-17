@@ -3,6 +3,8 @@ package com.example.proyectoandroidtdp.Hamming;
 import com.example.proyectoandroidtdp.Conversor.Conversor;
 import com.example.proyectoandroidtdp.Conversor.ConversorAbstracto;
 
+import java.security.InvalidParameterException;
+
 public class GeneradorHamming implements GeneradorHammingAbstracto {
 
     private static final int D1C1 = 0;
@@ -111,7 +113,9 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
 
     // 0 corresponde a la politica de correccion simple y deteccion simple.
     // 1 corresponde a la politica de deteccion simple y doble.
-    public String verificarHamming3(String msg, int politica){
+    public String verificarHamming3(String msg, int politica) throws InvalidParameterException {
+        if(!longitudValida(msg,3))
+            throw new InvalidParameterException("Longitud de mensaje inválida");
         String mensajeRecibido = getBitsMensaje(msg);
         int sindrome;
         int[] bitsCodigoRecibidos = getBitsCodigo(msg);
@@ -122,7 +126,9 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
         return mensajeHamming3(sindrome,politica,mensajeRecibido.length() - 1);
     }
 
-    public String verificarHamming4(String msg, int politica) {
+    public String verificarHamming4(String msg, int politica) throws InvalidParameterException {
+        if(!longitudValida(msg,4))
+            throw new InvalidParameterException("Longitud de mensaje inválida");
         String mensajeRecibidoConParidad = getBitsMensaje(msg);
         char paridadRecibida = mensajeRecibidoConParidad.charAt(mensajeRecibidoConParidad.length() - 1);
         String mensajeRecibido = mensajeRecibidoConParidad.substring(0,mensajeRecibidoConParidad.length() - 1);
@@ -200,6 +206,17 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
             sindromeString += bitRecibidos[i] ^ bitsRecalculados[i];
         return Integer.parseInt(sindromeString,2);
     }
+
+    private boolean longitudValida(String mensaje, int hamming){
+        int agregado = 0;
+        if(hamming == 4)
+            agregado = 1;
+        boolean longitudValida = true;
+        for(int i = 0; i < mensaje.length() && longitudValida; i++)
+            longitudValida = (Math.pow(2,i) + agregado) != mensaje.length();
+        return longitudValida;
+    }
+
 }
 
 

@@ -12,7 +12,6 @@
     <string name="lrc_vrc">LRC y VRC</string>
     <string name="generar_crc">Generar CRC</string>
     <string name="verificar_crc">Verificar CRC</string>
-    <string name="generador_crc">Generador CRC</string>
     <string name="generar_hamming">Generar código Hamming</string>
     <string name="verificar_hamming">Verificar código Hamming</string>
     <string name="deteccion_y_correcion_de_errores">Detección y corrección de Errores</string>
@@ -22,11 +21,10 @@
     <string name="operaciones_aritmeticas">Operaciones Aritméticas</string>
     <string name="sistemas_de_representacion">Sistemas de Representación</string>
     <string name="aritmetica">Aritmética</string>
-    <string name="verificador_crc">Verificador CRC</string>
 
-    <string name="generador_de_rangos">Generador de Rangos</string>
+    <string name="generar_rangos">Generador de Rangos</string>
 
-    <string name="cuerpo_ayuda_generador_rangos">* Ingrese la cantidad de bits disponibles y se le mostrará los diferentes
+    <string name="cuerpo_ayuda_generar_rangos">* Ingrese la cantidad de bits disponibles y se le mostrará los diferentes
     rangos con su correspondiente sistema de representacion.\n* La cantidad de bits disponibles tendra que ser mayor a dos.\n</string>
 
     <string-array name="arraySpinner">
@@ -75,8 +73,8 @@
         operandos deben ser de igual longitud.\n* En caso de producirse overflow, se le notificará.\n
     </string>
 
-    <string name="texto_ayuda_redondeo">* Ingrese un número binario y los dígitos de precision, luego
-        presione el boton "Redondear". Se le mostrará el número resultante utilizando los distintos
+    <string name="texto_ayuda_redondeo">* Ingrese un número binario y los dígitos de precisión, luego
+        presione el botón "Redondear". Se le mostrará el número resultante utilizando los distintos
         redondeos.\n
     </string>
 
@@ -84,18 +82,22 @@
         se le mostrarán los rangos corresponientes a cada sistema de representación.
     </string>
 
-    <string name="texto_ayuda_generador_crc">* Ingrese el mensaje a transmitir y el polinomio generador
+    <string name="texto_ayuda_generar_crc">* Ingrese el mensaje a transmitir y el polinomio generador
         a utilizar, luego presione el boton "Calcular CRC" y se le mostrará el mensaje a transmitir.
         \n* Los bits de redundancia serán mostrados en un color distinto.\n
     </string>
 
-    <string name="texto_ayuda_verificador_crc">* Ingrese el mensaje recibido y el polinomio generador
+    <string name="texto_ayuda_verificar_crc">* Ingrese el mensaje recibido y el polinomio generador
         a utilizar, luego presione el botón "Verificar" y se le mostrará si el mensaje fue recibido
         correctamente.\n
     </string>
 
-    <string name="texto_ayuda_hamming">* Ingrese los bits de datos a transmitir y se le mostrará su
-        codificación tanto en hamming basico como extendido.\n
+    <string name="texto_ayuda_generar_hamming">* Ingrese los bits de datos a transmitir y se le mostrará su
+        codificación tanto en Hamming básico como extendido.\n
+    </string>
+
+    <string name="texto_ayuda_verificar_hamming">* Ingrese los bits del paquete recibido y se le mostrará
+        si fue recibido correctamente o con error de acuerdo a las políticas detalladas.\n
     </string>
 
     <string name="informacion_inicio">Esta aplicación fue diseñada como parte del final de TDP -
@@ -121,7 +123,7 @@
     <string name="redondeo">Redondeo</string>
     <string name="numero">Número</string>
     <string name="precision">Precisión</string>
-    <string name="redondear">redondear</string>
+    <string name="redondear">Redondear</string>
     <string name="tema_oscuro">Tema oscuro</string>
 
 </resources>

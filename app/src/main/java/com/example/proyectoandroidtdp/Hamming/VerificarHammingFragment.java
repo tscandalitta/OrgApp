@@ -12,10 +12,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltros;
 import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltrosAbstracto;
 import com.example.proyectoandroidtdp.R;
+
+import java.security.InvalidParameterException;
 
 public class VerificarHammingFragment extends Fragment {
 
@@ -85,15 +88,23 @@ public class VerificarHammingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 paqueteRecibido = txtPaquete.getText().toString();
-                if(paqueteRecibido.length() > 0)
-                    if(hammingSeleccionado == HAMMING3) {
-                        txtConclusion1.setText(generador.verificarHamming3(paqueteRecibido, 0));
-                        txtConclusion2.setText(generador.verificarHamming3(paqueteRecibido, 1));
+                if(paqueteRecibido.length() > 1) {
+                    Toast toast;
+                    try {
+                        if (hammingSeleccionado == HAMMING3) {
+                            txtConclusion1.setText(generador.verificarHamming3(paqueteRecibido, 0));
+                            txtConclusion2.setText(generador.verificarHamming3(paqueteRecibido, 1));
+                        } else {
+                            txtConclusion1.setText(generador.verificarHamming4(paqueteRecibido, 1));
+                            txtConclusion2.setText(generador.verificarHamming4(paqueteRecibido, 0));
+                        }
+                    } catch (InvalidParameterException e) {
+                        toast = Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT);
+                        toast.show();
+                        txtConclusion1.setText("");
+                        txtConclusion2.setText("");
                     }
-                    else {
-                        txtConclusion1.setText(generador.verificarHamming4(paqueteRecibido, 1));
-                        txtConclusion2.setText(generador.verificarHamming4(paqueteRecibido, 0));
-                    }
+                }
             }
         });
 

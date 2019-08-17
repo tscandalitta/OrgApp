@@ -1,5 +1,7 @@
 package com.example.proyectoandroidtdp.Hamming;
 
+import java.security.InvalidParameterException;
+
 public interface GeneradorHammingAbstracto {
 
 
@@ -7,6 +9,6 @@ public interface GeneradorHammingAbstracto {
     String getHamming4(String msg);
     int[] getBitsCodigo(String msg);
     String getBitsMensaje(String msg);
-    String verificarHamming3(String msg, int politica);
-    String verificarHamming4(String msg, int politica);
+    String verificarHamming3(String msg, int politica) throws InvalidParameterException;
+    String verificarHamming4(String msg, int politica) throws InvalidParameterException ;
 }

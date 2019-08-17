@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,19 +10,19 @@
         android:id="@+id/labelRepresentacion"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
         android:text="@string/rc"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_cantidad_bits" />
 
     <EditText
         android:id="@+id/txt_cantidad_bits"
-        android:layout_width="100dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:hint="bits"
         android:inputType="number"
@@ -32,23 +33,21 @@
         android:id="@+id/labelRepresentacion1"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
         android:text="@string/sm"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/labelRepresentacion" />
 
     <TextView
         android:id="@+id/labelRepresentacion2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="64dp"
         android:text="Cantidad de bits:"
         android:textSize="20sp"
-        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,47 +55,47 @@
         android:id="@+id/labelRepresentacion3"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
         android:text="@string/drc"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/labelRepresentacion1" />
 
     <TextView
         android:id="@+id/txtRango1"
         style="@style/Resultados"
         android:layout_width="256dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="60dp"
         android:ems="50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.793"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_cantidad_bits" />
 
     <TextView
         android:id="@+id/txtRango2"
         style="@style/Resultados"
         android:layout_width="256dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="60dp"
         android:ems="50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.793"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRango1" />
 
     <TextView
         android:id="@+id/txtRango3"
         style="@style/Resultados"
         android:layout_width="256dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="60dp"
         android:ems="50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.793"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRango2" />
 
 </android.support.constraint.ConstraintLayout>
