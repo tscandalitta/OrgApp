@@ -8,12 +8,7 @@ public class Complementador implements ComplementadorAbstracto{
     public Complementador(){
     }
 
-    /**
-     * Transforma un numero en Complemento a la Base en un numero en Complemento a la Base Disminuida.
-     * @param numero numero en Complemento a la Base a tranformar.
-     * @param base base del numero ingresado.
-     * @return numero en complemento a la base Disminuida transformado.
-     */
+
 
     public String convertirRCtoDRC(String numero, int base){
         String toReturn = "";
@@ -38,12 +33,7 @@ public class Complementador implements ComplementadorAbstracto{
         return fueraDeRango;
     }
 
-    /**
-     * Transforma un numero en Complemento a la Base Disminuida en un numero en Complemento a la Base.
-     * @param numero numero en Complemento a la Base Disminuida a tranformar.
-     * @param base base del numero ingresado.
-     * @return numero en Complemento a la Base transformado.
-     */
+
     public String convertirDRCtoRC(String numero, int base){
         String toReturn = "";
         if(numero.length() > 1){
@@ -59,12 +49,7 @@ public class Complementador implements ComplementadorAbstracto{
         return toReturn;
     }
 
-    /**
-     * Transforma un numero en Signo Magnitud a un numero en Complemento a la Base Disminuida.
-     * @param numero numero en Signo Magnitud a transformar.
-     * @param base base del numero ingresado.
-     * @return numero en Complemento a la Base Disminuida
-     */
+
     public String toDRC(String numero, int base){
         String nuevoNum = "";
         if(numero.length() > 1) {
@@ -77,12 +62,7 @@ public class Complementador implements ComplementadorAbstracto{
         return nuevoNum;
     }
 
-    /**
-     * Transforma un numero en Signo Magnitud a un numero en Complemento a la Base.
-     * @param numero numero en Signo Magnitud a transformar.
-     * @param base base del numero ingresado.
-     * @return numero en Complemento a la Base.
-     */
+
     public String toRC(String numero, int base)throws InvalidParameterException{
         if(numero.length() > 1){
             if(numero.charAt(0) == '0')

@@ -3,6 +3,7 @@ package com.example.proyectoandroidtdp.CambioDeBase;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class BaseSeleccionadaOctal extends BaseSeleccionada {
 
@@ -14,7 +15,7 @@ public class BaseSeleccionadaOctal extends BaseSeleccionada {
     }
 
     public InputFilter getFiltro() {
-        return creadorDeFiltros.getFiltroOctalEntero();
+        return creadorDeFiltros.getFiltroOctalFraccionario();
     }
 
     public void handle(EditText editText) {
@@ -25,5 +26,34 @@ public class BaseSeleccionadaOctal extends BaseSeleccionada {
     @Override
     public int getBase() {
         return base;
+    }
+
+    @Override
+    public void setResultados(CambioDeBaseFragment fragment) {
+
+        TextView primerText = fragment.getPrimerTextView();
+        TextView segundoText = fragment.getSegundoTextView();
+        TextView tercerText = fragment.getTercerTextView();
+        TextView numero = fragment.getTextViewPrincipal();
+
+        String numOctal1 = numero.getText().toString();
+
+        String numDecimal1 = convertidor.toDecimal(numOctal1, 8);
+        String numBinario1 = convertidor.fromDecimal(numDecimal1, 2);
+        String numHexa1 = convertidor.fromDecimal(numDecimal1, 16);
+
+        primerText.setText(numBinario1);
+        segundoText.setText(numDecimal1);
+        tercerText.setText(numHexa1);
+
+
+
+    }
+
+    @Override
+    public void setLabels(CambioDeBaseFragment fragment) {
+        fragment.getLabelBase1().setText("BIN");
+        fragment.getLabelBase2().setText("DEC");
+        fragment.getLabelBase3().setText("HEX");
     }
 }

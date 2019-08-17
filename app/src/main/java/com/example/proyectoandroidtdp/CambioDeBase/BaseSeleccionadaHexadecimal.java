@@ -3,6 +3,8 @@ package com.example.proyectoandroidtdp.CambioDeBase;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class BaseSeleccionadaHexadecimal extends BaseSeleccionada {
 
@@ -15,7 +17,7 @@ public class BaseSeleccionadaHexadecimal extends BaseSeleccionada {
 
     @Override
     public InputFilter getFiltro() {
-        return creadorDeFiltros.getFiltroHexaEntero();
+        return creadorDeFiltros.getFiltroHexaFraccionario();
     }
 
     @Override
@@ -28,4 +30,48 @@ public class BaseSeleccionadaHexadecimal extends BaseSeleccionada {
     public int getBase() {
         return base;
     }
+
+    @Override
+    public void setResultados(CambioDeBaseFragment fragment) {
+        TextView primerText = fragment.getPrimerTextView();
+        TextView segundoText = fragment.getSegundoTextView();
+        TextView tercerText = fragment.getTercerTextView();
+        TextView numero = fragment.getTextViewPrincipal();
+
+
+        String numHexa3 = numero.getText().toString();
+
+        //Cuento la cantidad de puntos del string
+        if(cantPuntos(numHexa3) > 1)
+            //Error, no se convierte
+            Toast.makeText(fragment.getActivity(),"El numero contiene mas de 1 punto decimal. " +
+                    "Por favor, ingreselo correctamente",Toast.LENGTH_SHORT).show();
+        else{
+            String numDecimal3 = convertidor.toDecimal(numHexa3,16);
+            String numOctal3 = convertidor.fromDecimal(numDecimal3,8);
+            String numBinario3 = convertidor.fromDecimal(numDecimal3,2);
+            primerText.setText(numBinario3);
+            segundoText.setText(numOctal3);
+            tercerText.setText(numDecimal3);
+        }
+
+    }
+
+
+    private int cantPuntos(String numero){
+        int cantPuntos=0;
+        for(int i = 0; i < numero.length(); i++)
+            if(numero.charAt(i) == '.')
+                cantPuntos++;
+        return cantPuntos;
+    }
+
+    @Override
+    public void setLabels(CambioDeBaseFragment fragment) {
+        fragment.getLabelBase1().setText("BIN");
+        fragment.getLabelBase2().setText("OCT");
+        fragment.getLabelBase3().setText("DEC");
+    }
+
+
 }

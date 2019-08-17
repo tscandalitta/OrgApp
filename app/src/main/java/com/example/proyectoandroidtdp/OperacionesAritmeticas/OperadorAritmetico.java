@@ -8,15 +8,7 @@ import java.security.InvalidParameterException;
 public class OperadorAritmetico implements  OperadorAritmeticoAbstracto {
 
 
-    /**
-     * Realiaza la suma de dos numeros en signo magnitud.
-     * @param numX operando X.
-     * @param numY operando Y.
-     * @param base base en la cual se opera.
-     * @return devuelve la suma de los operando.
-     * @throws OverflowException cuando se produce overflow en la suma.
-     * @throws InvalidParameterException cuando detecta algun operando nulo.
-     */
+
     public String operarSM(String numX, String numY, int base) throws OverflowException, InvalidParameterException {
 
         if(numX.equals("") || numY.equals(""))
@@ -83,15 +75,7 @@ public class OperadorAritmetico implements  OperadorAritmeticoAbstracto {
             return numero;
     }
 
-    /**
-     * Realiza la suma de dos numeros en DRC.
-     * @param numX operando X.
-     * @param numY operando Y.
-     * @param base base en la cual se opera.
-     * @return devuelve el resultado de la operacion.
-     * @throws OverflowException cuando se produce overflow en la operacion.
-     * @throws InvalidParameterException cuando deecta algun operando nulo.
-     */
+
     public String operarDRC(String numX, String numY, int base) throws OverflowException,InvalidParameterException{
         Complementador complementador = new Complementador();
 
@@ -103,15 +87,7 @@ public class OperadorAritmetico implements  OperadorAritmeticoAbstracto {
         return complementador.toDRC(resultado,base);
     }
 
-    /**
-     * Realiza la suma de dos operando en RC.
-     * @param numX operando X.
-     * @param numY operando Y.
-     * @param base base en la cual se opera.
-     * @return devuelve el resultado de la operacion.
-     * @throws OverflowException caundo se produce overflow en la operacion.
-     * @throws InvalidParameterException cuando detecta algun operando nulo.
-     */
+
     public String operarRC(String numX, String numY, int base) throws OverflowException, InvalidParameterException{
         Complementador complementador = new Complementador();
 
