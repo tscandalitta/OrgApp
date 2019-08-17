@@ -117,7 +117,7 @@
                     android:id="@+id/cuerpo_ayuda_generador_rangos"
                     style="@style/Cuerpos"
                     android:layout_below="@+id/titulo_generador_rangos"
-                    android:text="@string/cuerpo_ayuda_generar_rangos" />
+                    android:text="@string/texto_ayuda_generar_rangos" />
 
 
                 <View

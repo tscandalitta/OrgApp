@@ -24,8 +24,7 @@
 
     <string name="generar_rangos">Generador de Rangos</string>
 
-    <string name="cuerpo_ayuda_generar_rangos">* Ingrese la cantidad de bits disponibles y se le mostrará los diferentes
-    rangos con su correspondiente sistema de representacion.\n* La cantidad de bits disponibles tendra que ser mayor a dos.\n</string>
+
 
     <string-array name="arraySpinner">
         <item>BIN</item>
@@ -56,7 +55,8 @@
     <string name="resultado">RESULTADO</string>
 
     <string name="texto_ayuda">* Aquí podrá encontrar la información necesaria para utilizar esta
-        aplicación.\n</string>
+        aplicación.\n
+    </string>
 
     <string name="texto_ayuda_cambio_de_base">* Seleccione la base de origen e ingrese el número no
         signado a convertir, ya sea entero o fraccionario. Podrá visualizar el número convertido en
@@ -64,24 +64,25 @@
     </string>
 
     <string name="texto_ayuda_sistemas_de_representacion">* Seleccione la base de origen y el sistema
-        de representación en la cual desea ingresar el número a convertir. La aplicación solo
-        convierte números enteros. Podrá visualizar el número en las diferentes representaciones\n
+        de representación del número a convertir. Podrá visualizar el número en las diferentes representaciones.\n
     </string>
 
     <string name="texto_ayuda_operaciones_aritmeticas">* Seleccione la base de origen y el sistema de
-        representación en el cual desea realizar la operacion e ingrese los operandos.\n* Ambos
-        operandos deben ser de igual longitud.\n* En caso de producirse overflow, se le notificará.\n*
-        Los operandos deberán empezar con su respectivo bit de signo , respetando su sistema de representacion.\n
+        representación en el cual desea realizar la operación e ingrese los operandos, ambos
+        deben tener la misma longitud.\n* En caso de producirse overflow, se le notificará. Los operandos
+        deberán empezar con su respectivo bit de signo, respetando su sistema de representación.\n
+    </string>
+
+    <string name="texto_ayuda_generar_rangos">* Ingrese la cantidad de bits disponibles y se le mostrarán
+        los rangos de los diferentes sistemas de representación.\n* La cantidad de bits deberá ser
+        mayor a dos.\n
     </string>
 
     <string name="texto_ayuda_redondeo">* Ingrese un número binario y los dígitos de precisión, luego
-        presione el botón "Redondear". Se le mostrará el número resultante utilizando los distintos
-        redondeos.\n
+        presione el botón "Redondear". Se le mostrará el número resultante utilizando los distintos tipos de
+        redondeo.\n
     </string>
 
-    <string name="texto_ayuda_rangos">* Ingrese la cantidad de bits y presione el boton "Calcular",
-        se le mostrarán los rangos corresponientes a cada sistema de representación.
-    </string>
 
     <string name="texto_ayuda_generar_crc">* Ingrese el mensaje a transmitir y el polinomio generador
         a utilizar, luego presione el boton "Calcular CRC" y se le mostrará el mensaje a transmitir.
@@ -89,8 +90,8 @@
     </string>
 
     <string name="texto_ayuda_verificar_crc">* Ingrese el mensaje recibido y el polinomio generador
-        a utilizar, luego presione el botón "Verificar" y se le mostrará si el mensaje fue recibido
-        correctamente.\n
+        utilizado, luego presione el botón "Verificar" y se le mostrará si el mensaje fue recibido
+        correctamente o con errores.\n
     </string>
 
     <string name="texto_ayuda_generar_hamming">* Ingrese los bits de datos a transmitir y se le mostrará su
@@ -98,7 +99,7 @@
     </string>
 
     <string name="texto_ayuda_verificar_hamming">* Ingrese los bits del paquete recibido y se le mostrará
-        si fue recibido correctamente o con error de acuerdo a las políticas detalladas.\n
+        si fue recibido correctamente o con error de acuerdo a las diferentes políticas.\n
     </string>
 
     <string name="informacion_inicio">Esta aplicación fue diseñada como parte del final de TDP -

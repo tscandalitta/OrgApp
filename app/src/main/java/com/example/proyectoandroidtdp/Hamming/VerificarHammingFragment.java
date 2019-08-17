@@ -68,13 +68,13 @@ public class VerificarHammingFragment extends Fragment {
 
                 switch(position){
                     case 0: //Hamming 3
-                        txtPolitica1.setText("D = 1, C = 1");
-                        txtPolitica2.setText("D = 2, C = 0");
+                        txtPolitica1.setText("D = 1, C = 1 :");
+                        txtPolitica2.setText("D = 2, C = 0 :");
                         hammingSeleccionado = HAMMING3;
                         break;
                     case 1: //Hamming 4
-                        txtPolitica1.setText("D = 2, C = 1");
-                        txtPolitica2.setText("D = 3, C = 0");
+                        txtPolitica1.setText("D = 2, C = 1 :");
+                        txtPolitica2.setText("D = 3, C = 0 :");
                         hammingSeleccionado = HAMMING4;
                 }
             }
