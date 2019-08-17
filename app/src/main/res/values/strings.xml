@@ -70,7 +70,8 @@
 
     <string name="texto_ayuda_operaciones_aritmeticas">* Seleccione la base de origen y el sistema de
         representación en el cual desea realizar la operacion e ingrese los operandos.\n* Ambos
-        operandos deben ser de igual longitud.\n* En caso de producirse overflow, se le notificará.\n
+        operandos deben ser de igual longitud.\n* En caso de producirse overflow, se le notificará.\n*
+        Los operandos deberán empezar con su respectivo bit de signo , respetando su sistema de representacion.\n
     </string>
 
     <string name="texto_ayuda_redondeo">* Ingrese un número binario y los dígitos de precisión, luego
@@ -101,7 +102,7 @@
     </string>
 
     <string name="informacion_inicio">Esta aplicación fue diseñada como parte del final de TDP -
-        2018\n\nDesarrolladores:\nTomás Scandalitta\nMaximiliano Montenegro\nHorus Moro
+        2018.\n\nDesarrolladores:\nTomás Scandalitta\nMaximiliano Montenegro\nHorus Moro
     </string>
 
     <string name="contacto">
