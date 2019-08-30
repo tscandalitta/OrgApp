@@ -20,8 +20,6 @@ resultados de los distintos ejercicios que puedan llegar a realizar los alumnos 
   - Hamming básico
   - Hamming extendido
 - Esquemas de redondeo:
-  - Hacia arriba (hacia +∞)
-  - Hacia abajo (hacia -∞)
   - Truncado
   - Aumentación
   - Proximidad biased (hacia afuera del cero)
