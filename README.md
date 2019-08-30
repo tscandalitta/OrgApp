@@ -11,9 +11,6 @@ resultados de los distintos ejercicios que puedan llegar a realizar los alumnos 
   - Complemento a la base disminuida (DRC)
 - Operaciones de suma y resta en las representaciones anteriores
 - Detección de errores:
-  - Bit de paridad
-  - VRC
-  - LRC
   - CRC
 - Corrección de errores:
   - Hamming básico
