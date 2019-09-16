@@ -9,7 +9,6 @@ resultados de los distintos ejercicios que puedan llegar a realizar los alumnos 
   - Signo magnitud (SM)
   - Complemento a la base (RC)
   - Complemento a la base disminuida (DRC)
-  - **BCD Exceso 3**
   - **Punto flotante**
   - **Norma IEEE 754**
 - Operaciones de suma y resta en las representaciones anteriores
