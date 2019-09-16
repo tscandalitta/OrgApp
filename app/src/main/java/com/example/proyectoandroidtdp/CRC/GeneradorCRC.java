@@ -66,18 +66,7 @@ public class GeneradorCRC implements GeneradorCRCAbstracto {
         }
     }
 
-    /**
-     * Verifica si el mensaje recibido llegó sin errores.
-     * @param msg Mensaje reicibido
-     * @param gen Polinomio generador
-     * @return true si el mensaje llegó sin errores, false en caso contrario
-     */
-    public boolean verificarCRC(String msg, String gen) throws InvalidParameterException{
-        String resto = generarCRC(msg,gen);
-        return restoNulo(resto);
-    }
-
-    private boolean restoNulo(String resto){
+    public boolean restoNulo(String resto){
         boolean esNulo = true;
         for(int i = 0; i < resto.length() && esNulo; i++)
             esNulo = resto.charAt(i) == '0';

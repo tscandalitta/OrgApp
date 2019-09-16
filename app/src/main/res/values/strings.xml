@@ -89,16 +89,19 @@
     </string>
 
     <string name="texto_ayuda_verificar_crc">* Ingrese el mensaje recibido y el polinomio generador
-        utilizado, luego presione el botón "Verificar" y se le mostrará si el mensaje fue recibido
-        correctamente o con errores.\n
+        utilizado. Se mostrará si el mensaje fue recibido correctamente o con errores, en caso de haber
+        error, se mostrará el resto resultante.\n
     </string>
 
     <string name="texto_ayuda_generar_hamming">* Ingrese los bits de datos a transmitir y se le mostrará su
         codificación tanto en Hamming básico como extendido.\n
+        * Los bits son ordenados de izquierda a derecha.\n
+        * Hamming 4 contempla el bit de paridad asumiendo que se trabaja con paridad par.
     </string>
 
     <string name="texto_ayuda_verificar_hamming">* Ingrese los bits del paquete recibido y se le mostrará
         si fue recibido correctamente o con error de acuerdo a las diferentes políticas.\n
+        * Hamming 4 contempla el bit de paridad asumiendo que se trabaja con paridad par.
     </string>
 
     <string name="informacion_inicio">Esta aplicación fue diseñada como parte del final de TDP -

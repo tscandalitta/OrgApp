@@ -21,6 +21,7 @@ public class VerificarCRCFragment extends Fragment {
 
     GeneradorCRCAbstracto calculadorCRC;
     EditText txtMensajeRecibido, txtGeneradorRecibido;
+    TextView txtResultado;
     Button btnVerificar;
     String mensajeRecibido, generadorRecibido;
 
@@ -34,6 +35,7 @@ public class VerificarCRCFragment extends Fragment {
         txtMensajeRecibido = view.findViewById(R.id.txtCRCMensajeRecibido);
         txtGeneradorRecibido = view.findViewById(R.id.txtCRCGeneradorRecibido);
         btnVerificar = view.findViewById(R.id.btnVerificarCRC);
+        txtResultado = view.findViewById(R.id.txtVerificarCRCResultado);
 
         CreadorDeFiltrosAbstracto creadorDeFiltros = new CreadorDeFiltros();
         InputFilter[] filtros = {creadorDeFiltros.getFiltroBinarioEntero(), new InputFilter.LengthFilter(16)};
@@ -45,17 +47,17 @@ public class VerificarCRCFragment extends Fragment {
             public void onClick(View v) {
                 mensajeRecibido = txtMensajeRecibido.getText().toString();
                 generadorRecibido = txtGeneradorRecibido.getText().toString();
-                if(mensajeRecibido.length() > 0 && generadorRecibido.length() > 0){
-                    Toast toast;
-                    try {
-                        if (calculadorCRC.verificarCRC(mensajeRecibido, generadorRecibido))
-                            toast = Toast.makeText(getActivity().getApplicationContext(), "Mensaje recibido correctamente", Toast.LENGTH_SHORT);
+                txtResultado.setText("");
+                try {
+                    if (mensajeRecibido.length() > 0 && generadorRecibido.length() > 0) {
+                        String resto = calculadorCRC.generarCRC(mensajeRecibido, generadorRecibido);
+                        if (calculadorCRC.restoNulo(resto))
+                            txtResultado.setText("Mensaje recibido correctamente");
                         else
-                            toast = Toast.makeText(getActivity().getApplicationContext(), "Mensaje recibido con errores", Toast.LENGTH_SHORT);
+                            txtResultado.setText("Mensaje recibido con errores\nResto: " + resto);
                     }
-                    catch (InvalidParameterException e){
-                        toast = Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT);
-                    }
+                } catch (InvalidParameterException e) {
+                    Toast toast = Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT);
                     toast.show();
                 }
             }

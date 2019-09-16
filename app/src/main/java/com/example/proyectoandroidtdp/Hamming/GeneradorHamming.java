@@ -123,7 +123,7 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
         int[] bitsCodigoRecalculados = getBitsCodigo(paqueteRecalculado);
         sindrome = calcularSindrome(bitsCodigoRecibidos,bitsCodigoRecalculados);
 
-        return mensajeHamming3(sindrome,politica,mensajeRecibido.length() - 1);
+        return mensajeHamming3(sindrome,politica,msg.length());
     }
 
     public String verificarHamming4(String msg, int politica) throws InvalidParameterException {
@@ -139,7 +139,7 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
         char paridadRecalculada = paqueteRecalculado.charAt(paqueteRecalculado.length() - 1);
         sindrome = calcularSindrome(bitsCodigoRecibidos,bitsCodigoRecalculados);
 
-        return mensajeHamming4(sindrome,politica,mensajeRecibido.length() - 1, paridadRecibida, paridadRecalculada);
+        return mensajeHamming4(sindrome,politica,msg.length(), paridadRecibida, paridadRecalculada);
     }
 
     private String mensajeHamming3(int sindrome, int politica, int longitud){

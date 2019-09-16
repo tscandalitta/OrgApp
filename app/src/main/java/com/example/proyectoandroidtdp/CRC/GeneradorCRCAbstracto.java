@@ -10,15 +10,15 @@ public interface GeneradorCRCAbstracto {
      * @param msj mensaje a transmitir
      * @param gen polinomio generador
      * @return codigo binario a transmitir
-     * @throws InvalidParameterException
+     * @throws InvalidParameterException si la longitud del mensaje es menor que la del polinomio
+     * generador o si el poliniomio generador es inválido
      */
     String generarCRC(String msj, String gen) throws InvalidParameterException;
 
     /**
-     * Verifica si un mensaje recibido es valido a partir de un polinomio generador
-     * @param msj mensaje a transmitir
-     * @param gen polinomio generador
-     * @return true si el mensaje es valido, false en caso contrario
+     * Verifica si el resto es nulo
+     * @param resto resto del calculo de CRC
+     * @return true si el resto es nulo, false en caso contrario
      */
-    boolean verificarCRC(String msj, String gen);
+    boolean restoNulo(String resto);
 }
