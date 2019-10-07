@@ -56,7 +56,7 @@ public class OperacionAritmeticaFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                TextView selectedText = (TextView) parent.getChildAt(0).findViewById(R.id.texto_spinner);
+                TextView selectedText = parent.getChildAt(0).findViewById(R.id.texto_spinner);
                 if (selectedText != null) {
                     selectedText.setTextColor(colorTexto);
                 }
@@ -86,7 +86,7 @@ public class OperacionAritmeticaFragment extends Fragment {
 
                 }
 
-                inputFilter = baseSeleccionada.getFiltro();
+                inputFilter = baseSeleccionada.getFiltroEntero();
                 InputFilter[] filtersArray = {inputFilter, new InputFilter.LengthFilter(16)};
                 baseSeleccionada.handle(numeroX);
                 baseSeleccionada.handle(numeroY);

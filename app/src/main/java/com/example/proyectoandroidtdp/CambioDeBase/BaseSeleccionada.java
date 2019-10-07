@@ -16,7 +16,8 @@ public abstract class BaseSeleccionada {
         convertidor = new Convertidor();
     }
 
-    public abstract InputFilter getFiltro();
+    public abstract InputFilter getFiltroEntero();
+    public abstract InputFilter getFiltroFraccionario();
     public abstract void handle(EditText editText);
     public abstract int getBase();
 

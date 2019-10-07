@@ -14,7 +14,10 @@ public class BaseSeleccionadaDecimal extends BaseSeleccionada {
         base = 10;
     }
 
-    public InputFilter getFiltro() {
+    public InputFilter getFiltroEntero(){
+        return creadorDeFiltros.getFiltroDecimalEntero();
+    }
+    public InputFilter getFiltroFraccionario() {
         return creadorDeFiltros.getFiltroDecimalFraccionario();
     }
 

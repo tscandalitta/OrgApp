@@ -82,16 +82,13 @@ public class CambioDeBaseFragment extends Fragment {
 
                 InputFilter inputFilter, maxLength;
 
-                int tipoDeEntrada = (InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED |
-                        InputType.TYPE_NUMBER_FLAG_DECIMAL);
-
                 switch(position) {
                     //Binario
                     case 0:
 
                         base = new BaseSeleccionadaBinario();
                         base.setLabels(cambioDeBaseFragment);
-                        inputFilter = base.getFiltro();
+                        inputFilter = base.getFiltroFraccionario();
                         maxLength = new InputFilter.LengthFilter(20);
                         break;
                     //Octal
@@ -99,7 +96,7 @@ public class CambioDeBaseFragment extends Fragment {
 
                         base = new BaseSeleccionadaOctal();
                         base.setLabels(cambioDeBaseFragment);
-                        inputFilter = base.getFiltro();
+                        inputFilter = base.getFiltroFraccionario();
                         maxLength = new InputFilter.LengthFilter(10);
                         break;
                     //Decimal
@@ -107,7 +104,7 @@ public class CambioDeBaseFragment extends Fragment {
 
                         base = new BaseSeleccionadaDecimal();
                         base.setLabels(cambioDeBaseFragment);
-                        inputFilter = base.getFiltro();
+                        inputFilter = base.getFiltroFraccionario();
                         maxLength = new InputFilter.LengthFilter(10);
                         break;
                     //Hexadecimal
@@ -115,7 +112,7 @@ public class CambioDeBaseFragment extends Fragment {
 
                         base = new BaseSeleccionadaHexadecimal();
                         base.setLabels(cambioDeBaseFragment);
-                        inputFilter = base.getFiltro();
+                        inputFilter = base.getFiltroFraccionario();
                         maxLength = new InputFilter.LengthFilter(7);
                 }
 
@@ -123,7 +120,6 @@ public class CambioDeBaseFragment extends Fragment {
                 base.handle(editTextNumero);
                 InputFilter[] filtersArray = {inputFilter,maxLength};
                 editTextNumero.setFilters(filtersArray);
-                editTextNumero.setInputType(tipoDeEntrada);
             }
 
             @Override
@@ -139,10 +135,10 @@ public class CambioDeBaseFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.length()!=0&&s.charAt(0)!='.'){
+                if (s.length() != 0 && s.charAt(0) != '.'){
                     base.setResultados(cambioDeBaseFragment);
-                    }
-                else{
+                }
+                else {
                     txtNroConvertido1.setText("");
                     txtNroConvertido2.setText("");
                     txtNroConvertido3.setText("");

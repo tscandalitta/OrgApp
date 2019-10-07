@@ -14,7 +14,10 @@ public class BaseSeleccionadaOctal extends BaseSeleccionada {
         base = 8;
     }
 
-    public InputFilter getFiltro() {
+    public InputFilter getFiltroEntero(){
+        return creadorDeFiltros.getFiltroOctalEntero();
+    }
+    public InputFilter getFiltroFraccionario() {
         return creadorDeFiltros.getFiltroOctalFraccionario();
     }
 

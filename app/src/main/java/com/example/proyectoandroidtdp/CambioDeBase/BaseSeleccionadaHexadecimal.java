@@ -15,8 +15,10 @@ public class BaseSeleccionadaHexadecimal extends BaseSeleccionada {
         base = 16;
     }
 
-    @Override
-    public InputFilter getFiltro() {
+    public InputFilter getFiltroEntero(){
+        return creadorDeFiltros.getFiltroHexaEntero();
+    }
+    public InputFilter getFiltroFraccionario() {
         return creadorDeFiltros.getFiltroHexaFraccionario();
     }
 
@@ -44,8 +46,9 @@ public class BaseSeleccionadaHexadecimal extends BaseSeleccionada {
         //Cuento la cantidad de puntos del string
         if(cantPuntos(numHexa3) > 1)
             //Error, no se convierte
-            Toast.makeText(fragment.getActivity(),"El numero contiene mas de 1 punto decimal. " +
-                    "Por favor, ingreselo correctamente",Toast.LENGTH_SHORT).show();
+            Toast.makeText(fragment.getActivity(),"El número contiene más de 1 punto decimal.\n"+
+                    "Por favor, ingréselo correctamente.",
+                    Toast.LENGTH_SHORT).show();
         else{
             String numDecimal3 = convertidor.toDecimal(numHexa3,16);
             String numOctal3 = convertidor.fromDecimal(numDecimal3,8);

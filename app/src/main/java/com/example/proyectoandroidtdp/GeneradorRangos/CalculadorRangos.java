@@ -6,20 +6,20 @@ public class CalculadorRangos implements CalculadorRangosAbstracto {
 
     }
 
-    public String getRangoSM(int cantidadBits){
+    public String getRangoSM(int base, int cantidadBits){
 
-        int maximo = (int) Math.pow(2, cantidadBits - 1) - 1;
+        int maximo = (int) Math.pow(base, cantidadBits - 1) - 1;
 
         return "(-" + maximo + ", " + maximo + ")";
     }
 
-    public String getRangoDRC(int cantidadBits){
-        return getRangoSM(cantidadBits);
+    public String getRangoDRC(int base, int cantidadBits){
+        return getRangoSM(base, cantidadBits);
     }
 
-    public String getRangoRC(int cantidadBits){
+    public String getRangoRC(int base, int cantidadBits){
 
-        int maximo = (int) Math.pow(2, cantidadBits - 1) - 1;
+        int maximo = (int) Math.pow(base, cantidadBits - 1) - 1;
         int minimo = maximo + 1;
 
         return "(-" + minimo + ", " + maximo + ")";

@@ -27,8 +27,6 @@ public class GeneradorCRC implements GeneradorCRCAbstracto {
     }
 
     public String generarCRC(String msj, String gen) throws InvalidParameterException{
-        if(msj.length() < gen.length())
-            throw new InvalidParameterException("El mensaje debe ser más largo");
         if(!generadorValido(gen))
            throw new InvalidParameterException("El polinomio generador es inválido");
 

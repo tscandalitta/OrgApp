@@ -70,7 +70,7 @@ public class SistemasDeRepresentacionFragment extends Fragment {
 
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-                TextView selectedText = (TextView) adapterView.getChildAt(0).findViewById(R.id.texto_spinner);
+                TextView selectedText = adapterView.getChildAt(0).findViewById(R.id.texto_spinner);
                 if (selectedText != null) {
                     selectedText.setTextColor(colorTexto);
                 }
@@ -95,7 +95,7 @@ public class SistemasDeRepresentacionFragment extends Fragment {
                     default:
                         baseSeleccionada= new BaseSeleccionadaHexadecimal();
                 }
-                inputFilter = baseSeleccionada.getFiltro();
+                inputFilter = baseSeleccionada.getFiltroEntero();
                 InputFilter[] filtersArray = {inputFilter, new InputFilter.LengthFilter(16)};
 
                 baseSeleccionada.handle(editTextNumero);
@@ -113,7 +113,7 @@ public class SistemasDeRepresentacionFragment extends Fragment {
 
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-                TextView selectedText = (TextView) adapterView.getChildAt(0).findViewById(R.id.texto_spinner);
+                TextView selectedText = adapterView.getChildAt(0).findViewById(R.id.texto_spinner);
                 if (selectedText != null) {
                     selectedText.setTextColor(colorTexto);
                 }

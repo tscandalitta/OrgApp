@@ -24,13 +24,18 @@ public class Complementador implements ComplementadorAbstracto{
         return toReturn;
     }
 
-    private boolean fueraDeRango(String numero){
-        boolean fueraDeRango = true;
-        for(int i=1; i<numero.length() && fueraDeRango; i++){
+    /**
+     * Verifica si un numero es de la forma "(base-1)0000000"
+     * @param numero
+     * @return true si es el menor negativo en rc, false en caso contrario
+     */
+    private boolean menorNegativoRC(String numero){
+        boolean menor = true;
+        for(int i=1; i<numero.length() && menor; i++){
             if(numero.charAt(i) != '0')
-                fueraDeRango = false;
+                menor = false;
         }
-        return fueraDeRango;
+        return menor;
     }
 
 
@@ -67,8 +72,8 @@ public class Complementador implements ComplementadorAbstracto{
         if(numero.length() > 1){
             if(numero.charAt(0) == '0')
                 return numero;
-            if(fueraDeRango(numero))
-                return "";
+            if(menorNegativoRC(numero))
+                return numero;
 
             String numeroComplementado = complementar(numero,base);
             String numeroComplementoBase="";

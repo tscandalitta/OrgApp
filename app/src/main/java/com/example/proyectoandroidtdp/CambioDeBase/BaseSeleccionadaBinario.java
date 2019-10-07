@@ -14,11 +14,15 @@ public class BaseSeleccionadaBinario extends BaseSeleccionada {
         base = 2;
     }
 
-    public InputFilter getFiltro() {
+    public InputFilter getFiltroEntero() {
+        return creadorDeFiltros.getFiltroBinarioEntero();
+    }
+
+    public InputFilter getFiltroFraccionario() {
         return creadorDeFiltros.getFiltroBinarioFraccionario();
     }
 
-    @Override
+
     public void handle(EditText editText) {
         int tipoDeEntrada = (InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         editText.setInputType(tipoDeEntrada);
@@ -28,7 +32,7 @@ public class BaseSeleccionadaBinario extends BaseSeleccionada {
         return base;
     }
 
-    @Override
+
     public void setResultados(CambioDeBaseFragment fragment) {
 
         TextView primerText = fragment.getPrimerTextView();
@@ -47,7 +51,6 @@ public class BaseSeleccionadaBinario extends BaseSeleccionada {
         tercerText.setText(numHexa);
     }
 
-    @Override
     public void setLabels(CambioDeBaseFragment fragment) {
         fragment.getLabelBase1().setText("OCT");
         fragment.getLabelBase2().setText("DEC");
