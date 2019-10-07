@@ -30,6 +30,8 @@ public class RangosFragment extends Fragment {
     private Spinner spinnerDeBases;
     private BaseSeleccionada baseSeleccionada;
     private CharSequence cantBits;
+    private int colorTexto;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,6 +47,8 @@ public class RangosFragment extends Fragment {
         rangoRC = view.findViewById(R.id.txtRango1);
         rangoDRC = view.findViewById(R.id.txtRango3);
 
+        colorTexto = cantidadBits.getCurrentTextColor();
+
         spinnerDeBases = view.findViewById(R.id.spinnerRangos);
         String [] bases = getResources().getStringArray(R.array.arraySpinner);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getActivity().getApplicationContext(),
@@ -55,8 +59,15 @@ public class RangosFragment extends Fragment {
 
         spinnerDeBases.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
+
+
              @Override
              public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+
+                 TextView selectedText = adapterView.getChildAt(0).findViewById(R.id.texto_spinner);
+                 if (selectedText != null) {
+                     selectedText.setTextColor(colorTexto);
+                 }
                  switch (position){
                      case 0:
                          baseSeleccionada = new BaseSeleccionadaBinario();
