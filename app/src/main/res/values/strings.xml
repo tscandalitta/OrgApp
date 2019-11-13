@@ -63,23 +63,24 @@
     </string>
 
     <string name="texto_ayuda_sistemas_de_representacion">* Seleccione la base de origen y el sistema
-        de representación del número a convertir. Podrá visualizar el número en las diferentes representaciones.\n
+        de representación del número a convertir. Podrá visualizar el número en las diferentes
+        representaciones.\n
     </string>
 
     <string name="texto_ayuda_operaciones_aritmeticas">* Seleccione la base de origen y el sistema de
-        representación en el cual desea realizar la operación e ingrese los operandos, ambos
-        deben tener la misma longitud.\n* En caso de producirse overflow, se le notificará. Los operandos
+        representación en el cual desea realizar la operación e ingrese los operandos, ambos deben
+        tener la misma longitud.\n* En caso de producirse overflow, se le notificará. Los operandos
         deberán empezar con su respectivo bit de signo, respetando su sistema de representación.\n
     </string>
 
-    <string name="texto_ayuda_generar_rangos">* Ingrese la cantidad de bits disponibles y se le mostrarán
-        los rangos de los diferentes sistemas de representación.\n* La cantidad de bits deberá ser
-        mayor a dos.\n
+    <string name="texto_ayuda_generar_rangos">* Ingrese la cantidad de bits disponibles junto con la
+        base y se le mostrarán los rangos de los diferentes sistemas de representación.\n* La cantidad
+        de bits deberá ser mayor a dos.\n
     </string>
 
     <string name="texto_ayuda_redondeo">* Ingrese un número binario y los dígitos de precisión, luego
-        presione el botón "Redondear". Se le mostrará el número resultante utilizando los distintos tipos de
-        redondeo.\n
+        presione el botón "Redondear". Se le mostrará el número resultante utilizando los distintos
+        tipos de redondeo.\n
     </string>
 
 
@@ -89,18 +90,18 @@
     </string>
 
     <string name="texto_ayuda_verificar_crc">* Ingrese el mensaje recibido y el polinomio generador
-        utilizado. Se mostrará si el mensaje fue recibido correctamente o con errores, en caso de haber
-        error, se mostrará el resto resultante.\n
+        utilizado. Se mostrará si el mensaje fue recibido correctamente o con errores, en caso de
+        haber error, se mostrará el resto resultante.\n
     </string>
 
-    <string name="texto_ayuda_generar_hamming">* Ingrese los bits de datos a transmitir y se le mostrará su
-        codificación tanto en Hamming básico como extendido.\n
+    <string name="texto_ayuda_generar_hamming">* Ingrese los bits de datos a transmitir y se le
+        mostrará su codificación tanto en Hamming básico como extendido.\n
         * Los bits son ordenados de izquierda a derecha.\n
         * Hamming 4 contempla el bit de paridad asumiendo que se trabaja con paridad par.
     </string>
 
-    <string name="texto_ayuda_verificar_hamming">* Ingrese los bits del paquete recibido y se le mostrará
-        si fue recibido correctamente o con error de acuerdo a las diferentes políticas.\n
+    <string name="texto_ayuda_verificar_hamming">* Ingrese los bits del paquete recibido y se le
+        mostrará si fue recibido correctamente o con error de acuerdo a las diferentes políticas.\n
         * Hamming 4 contempla el bit de paridad asumiendo que se trabaja con paridad par.
     </string>
 
@@ -109,14 +110,15 @@
     </string>
 
     <string name="contacto">
-        Si encontrás una falla y/o querés enviar una sugerencia o crítica, contactanos a unsorgapp@gmail.com
+        Si encontrás una falla y/o querés enviar una sugerencia o crítica, contactanos a
+        unsorgapp@gmail.com
     </string>
 
     <string name="par">Par</string>
     <string name="impar">Impar</string>
     <string name="calcular">calcular</string>
-    <string name="mensaje_a_transmitir_hamming_3">Mensaje a transmitir Hamming 3:</string>
-    <string name="mensaje_a_transmitir_hamming_4">Mensaje a transmitir Hamming 4:</string>
+    <string name="paquete_hamming_3">Paquete Hamming 3:</string>
+    <string name="paquete_hamming_4">Paquete Hamming 4:</string>
     <string name="mensaje_a_transmitir">Mensaje a transmitir:</string>
     <string name="calcular_crc">Calcular CRC</string>
     <string name="mensaje">Mensaje</string>

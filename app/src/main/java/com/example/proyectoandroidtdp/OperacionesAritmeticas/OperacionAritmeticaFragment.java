@@ -138,27 +138,27 @@ public class OperacionAritmeticaFragment extends Fragment {
                     String suma = "";
                     int base = baseSeleccionada.getBase();
 
-                    switch(sistemaSeleccionado){
-                        case "SM":
-                            suma = operadorAritmetico.operarSM(numX,numY,base);
-                            break;
-                        case "DRC":
-                            suma = operadorAritmetico.operarDRC(numX,numY,base);
-                            break;
-                        case "RC":
-                            suma = operadorAritmetico.operarRC(numX,numY,base);
-                            break;
+                    if(!numX.equals("") && !numY.equals("")) {
+                        switch (sistemaSeleccionado) {
+                            case "SM":
+                                suma = operadorAritmetico.operarSM(numX, numY, base);
+                                break;
+                            case "DRC":
+                                suma = operadorAritmetico.operarDRC(numX, numY, base);
+                                break;
+                            case "RC":
+                                suma = operadorAritmetico.operarRC(numX, numY, base);
+                                break;
+                        }
+
+                        resultado.setText(suma);
                     }
-
-                    resultado.setText(suma);
-
-
                 }catch (OverflowException | InvalidParameterException e){
                     Toast toast1 =
                             Toast.makeText(getActivity().getApplicationContext(),
                                     e.getMessage(), Toast.LENGTH_LONG);
-
                     toast1.show();
+                    resultado.setText("");
                 }
             }
         });

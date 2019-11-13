@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.proyectoandroidtdp.CambioDeBase.BaseSeleccionada;
 import com.example.proyectoandroidtdp.CambioDeBase.BaseSeleccionadaBinario;
@@ -20,6 +21,7 @@ import com.example.proyectoandroidtdp.CambioDeBase.BaseSeleccionadaDecimal;
 import com.example.proyectoandroidtdp.CambioDeBase.BaseSeleccionadaHexadecimal;
 import com.example.proyectoandroidtdp.CambioDeBase.BaseSeleccionadaOctal;
 import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltros;
+import com.example.proyectoandroidtdp.OperacionesAritmeticas.OverflowException;
 import com.example.proyectoandroidtdp.R;
 
 
@@ -27,7 +29,6 @@ public class RangosFragment extends Fragment {
 
     private CalculadorRangos calculadorRangos;
     private TextView rangoSM, rangoRC, rangoDRC;
-    private Spinner spinnerDeBases;
     private BaseSeleccionada baseSeleccionada;
     private CharSequence cantBits;
 
@@ -37,7 +38,7 @@ public class RangosFragment extends Fragment {
 
         final View view = inflater.inflate(R.layout.fragment_rangos, container, false);
 
-        EditText cantidadBits = view.findViewById(R.id.txt_cantidad_bits);
+        final EditText cantidadBits = view.findViewById(R.id.txt_cantidad_bits);
 
         cantBits = "";
 
@@ -45,7 +46,7 @@ public class RangosFragment extends Fragment {
         rangoRC = view.findViewById(R.id.txtRango1);
         rangoDRC = view.findViewById(R.id.txtRango3);
 
-        spinnerDeBases = view.findViewById(R.id.spinnerRangos);
+        final Spinner spinnerDeBases = view.findViewById(R.id.spinnerRangos);
         String [] bases = getResources().getStringArray(R.array.arraySpinner);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getActivity().getApplicationContext(),
                 R.layout.item_spinner, R.id.texto_spinner,bases);
@@ -57,6 +58,11 @@ public class RangosFragment extends Fragment {
 
              @Override
              public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                 TextView selectedText = adapterView.getChildAt(0).findViewById(R.id.texto_spinner);
+                 if (selectedText != null) {
+                     selectedText.setTextColor(cantidadBits.getCurrentTextColor());
+                 }
+
                  switch (position){
                      case 0:
                          baseSeleccionada = new BaseSeleccionadaBinario();
@@ -112,16 +118,26 @@ public class RangosFragment extends Fragment {
     }
 
     private void actualizarRangos(CharSequence s){
-        if(s.length() > 0 && Integer.parseInt(s.toString()) >= 2){
-            rangoSM.setText(calculadorRangos.getRangoSM(baseSeleccionada.getBase(),Integer.parseInt(s.toString())));
-            rangoRC.setText(calculadorRangos.getRangoRC(baseSeleccionada.getBase(),Integer.parseInt(s.toString())));
-            rangoDRC.setText(calculadorRangos.getRangoDRC(baseSeleccionada.getBase(),Integer.parseInt(s.toString())));
+        String resultSM = "";
+        String resultDRC = "";
+        String resultRC = "";
+
+        if(s.length() > 0 && Integer.parseInt(s.toString()) >= 2) {
+            try {
+                resultSM = calculadorRangos.getRangoSM(baseSeleccionada.getBase(), Integer.parseInt(s.toString()));
+                resultRC = calculadorRangos.getRangoRC(baseSeleccionada.getBase(), Integer.parseInt(s.toString()));
+                resultDRC = calculadorRangos.getRangoDRC(baseSeleccionada.getBase(), Integer.parseInt(s.toString()));
+            } catch (OverflowException e) {
+                Toast toast1 =
+                        Toast.makeText(getActivity().getApplicationContext(),
+                                "El resultado es demasiado grande", Toast.LENGTH_LONG);
+                toast1.show();
+            }
+
         }
-        else{
-            rangoDRC.setText("");
-            rangoRC.setText("");
-            rangoSM.setText("");
-        }
+        rangoSM.setText(resultSM);
+        rangoRC.setText(resultRC);
+        rangoDRC.setText(resultDRC);
     }
 
 }

@@ -101,7 +101,6 @@ public class OperadorAritmetico implements  OperadorAritmeticoAbstracto {
         return complementador.toDRC(resultado,base);
     }
 
-    ///ES INCORRECTO TRABAJAR CON sumarSM(), LA SOLUCION ESTA HECHA A MEDIDA, ATADO CON ALAMBRE
     public String operarRC(String numX, String numY, int base) throws OverflowException, InvalidParameterException{
         Complementador complementador = new Complementador();
 
@@ -110,20 +109,38 @@ public class OperadorAritmetico implements  OperadorAritmeticoAbstracto {
 
         String resultado = sumarSM(x,y,base);
 
-        ///////SOLUCION HORRIBLE, PERO BUE.../////////////////////////////////////
+        ////////////////////////////////Solucion hecha a medida debido a que usamos sumarSM()///////////////////////////////
+        if (!numeroValidoRC(resultado, numX.length()))
+            throw new OverflowException();
         if(resultado.length() > numX.length()) {
-            if (resultado.charAt(1) != '1')
-                throw new OverflowException();
             if(base == 16)
                 resultado = resultado.replace('1','F');
             else
                 resultado = resultado.replace('1',(char)(base-1 + '0'));
-        }
-
-        if(resultado.length() > numX.length()) {
             resultado = resultado.substring(1);
         }
 
         return complementador.toRC(resultado,base);
+    }
+
+    /**
+     * Verifica que el resultado sea valido
+     * @param resultado
+     * @param longitud: longitud de los operandos
+     * @param signo: de los operandos, como solo se mira cuando el resultado es mas
+     *  largo que operandos, es porque son del mismo signo
+     * @return valido o no
+     */
+    private boolean numeroValidoRC(String resultado, int longitud) {
+        boolean valido = false;
+        if(resultado.length() <= longitud) //Si el resultado tiene la misma longitud que los operandos, es valido
+            valido = true;
+        else {
+            if(resultado.charAt(1) != '1')
+                valido = false;
+            for(int i = 2; i < resultado.length() && valido; i++) //verifico que sea el caso limite del mayor negativo "(base-1)000..00"
+                valido = resultado.charAt(i) == '0';
+        }
+        return valido;
     }
 }

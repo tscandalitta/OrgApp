@@ -67,7 +67,7 @@
 
         <TextView
             android:id="@+id/txtCRC1"
-            android:layout_width="160dp"
+            android:layout_width="180dp"
             android:layout_height="38dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="44dp"

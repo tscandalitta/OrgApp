@@ -47,18 +47,21 @@ public class GenerarCRCFragment extends Fragment {
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resto = "";
                 mensaje = txtMensaje.getText().toString();
                 generador = txtGenerador.getText().toString();
-                if(mensaje.length() > 0 && generador.length() > 0) {
+                if(mensaje.length() > 0 && generador.length() > 0)
                     try {
                         resto = calculadorCRC.generarCRC(mensaje, generador);
                         txtMensajeFinal.setText(mensaje);
                     } catch (InvalidParameterException e) {
                         Toast toast = Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT);
                         toast.show();
+                        txtMensajeFinal.setText("");
                     }
-                    txtCRCFinal.setText(resto);
-                }
+                else
+                    txtMensajeFinal.setText("");
+                txtCRCFinal.setText(resto);
             }
         });
 

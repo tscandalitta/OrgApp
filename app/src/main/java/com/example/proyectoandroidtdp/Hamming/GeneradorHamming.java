@@ -101,14 +101,25 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
         if(mensaje.length() > 0) {
             hamming3 = calcularHamming3(mensaje);
             hamming4 = new int[hamming3.length + 1];
-            int bitParidad = 0;
-            for (int i = 0; i < hamming3.length; i++) {
-                hamming4[i] = hamming3[i];
-                bitParidad = bitParidad ^ hamming3[i];
-            }
-            hamming4[hamming3.length] = bitParidad;
+
+            System.arraycopy(hamming3,0,hamming4,0,hamming3.length);
+            hamming4[hamming4.length - 1] = calcularParidad(hamming3);
         }
         return hamming4;
+    }
+
+    private int calcularParidad(int[] arr){
+        int bitParidad = 0;
+        for(int i = 0; i < arr.length; i++)
+            bitParidad = bitParidad ^ arr[i];
+        return bitParidad;
+    }
+
+    private int calcularParidad(String arr){
+        int bitParidad = 0;
+        for(int i = 0; i < arr.length(); i++)
+            bitParidad = bitParidad ^ arr.charAt(i);
+        return bitParidad;
     }
 
     // 0 corresponde a la politica de correccion simple y deteccion simple.
@@ -129,17 +140,23 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
     public String verificarHamming4(String msg, int politica) throws InvalidParameterException {
         if(!longitudValida(msg,4))
             throw new InvalidParameterException("Longitud de mensaje inválida");
+
         String mensajeRecibidoConParidad = getBitsMensaje(msg);
         char paridadRecibida = mensajeRecibidoConParidad.charAt(mensajeRecibidoConParidad.length() - 1);
+        int paridadRecibidaInt = paridadRecibida - 48;
+
+        //Elimino el bit de paridad
         String mensajeRecibido = mensajeRecibidoConParidad.substring(0,mensajeRecibidoConParidad.length() - 1);
-        int sindrome;
+
         int[] bitsCodigoRecibidos = getBitsCodigo(msg);
         String paqueteRecalculado = getHamming4(mensajeRecibido);
         int[] bitsCodigoRecalculados = getBitsCodigo(paqueteRecalculado);
-        char paridadRecalculada = paqueteRecalculado.charAt(paqueteRecalculado.length() - 1);
-        sindrome = calcularSindrome(bitsCodigoRecibidos,bitsCodigoRecalculados);
 
-        return mensajeHamming4(sindrome,politica,msg.length(), paridadRecibida, paridadRecalculada);
+        //Recalculo la paridad en base al mensaje que me llegó.
+        int paridadRecalculada = calcularParidad(msg.substring(0,msg.length() - 1));
+        int sindrome = calcularSindrome(bitsCodigoRecibidos,bitsCodigoRecalculados);
+
+        return mensajeHamming4(sindrome,politica,msg.length(), paridadRecibidaInt, paridadRecalculada);
     }
 
     private String mensajeHamming3(int sindrome, int politica, int longitud){
@@ -192,7 +209,7 @@ public class GeneradorHamming implements GeneradorHammingAbstracto {
                     mensaje = "Se detectó error doble";
                 else
                     if (sindrome <= longitud)
-                        mensaje = "Se detectó porción de error???????";
+                        mensaje = "Se detectó error simple en la posición " + sindrome;
                     else
                         mensaje = "Se detectó error de longitud mayor a 2";
             }

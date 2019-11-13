@@ -10,21 +10,21 @@
         android:id="@+id/txtRedondeoUnbiased"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/txtLabelProximidadUnbiased"
-        app:layout_constraintTop_toBottomOf="@+id/txtRedondeoBiased" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelProximidadUnbiased" />
 
     <TextView
         android:id="@+id/txtRedondeoBiased"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/txtLabelProximidadUnbiased"
-        app:layout_constraintTop_toBottomOf="@+id/txtRedondeoAumentacion" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelProximidadBiased" />
 
     <TextView
         android:id="@+id/txtLabelAumentacion2"
@@ -32,28 +32,28 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Aumentación"
+        android:text="Aumentación:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLabelTruncado" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRedondeoTruncado" />
 
     <TextView
         android:id="@+id/txtRedondeoAumentacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/txtLabelProximidadUnbiased"
-        app:layout_constraintTop_toBottomOf="@+id/txtRedondeoTruncado" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelAumentacion2" />
 
     <TextView
         android:id="@+id/txtLabelTruncado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:text="Truncado"
+        android:layout_marginTop="32dp"
+        android:text="Truncado:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRedondear" />
@@ -102,10 +102,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Proximidad Biased"
+        android:text="Proximidad Biased:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLabelAumentacion2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRedondeoAumentacion" />
 
     <TextView
         android:id="@+id/txtLabelProximidadUnbiased"
@@ -113,18 +113,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Proximidad Unbiased"
+        android:text="Proximidad Unbiased:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLabelProximidadBiased" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRedondeoBiased" />
 
     <TextView
         android:id="@+id/txtRedondeoTruncado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/txtLabelProximidadUnbiased"
-        app:layout_constraintTop_toBottomOf="@+id/btnRedondear" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelTruncado" />
 </android.support.constraint.ConstraintLayout>

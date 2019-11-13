@@ -13,6 +13,8 @@ public class Redondeador implements RedondeadorAbstracto {
         String parteEntera, parteFraccionaria;
 
         if(partes.length >= 2) {
+            if(precision == 0 )
+                return partes[0];
             parteEntera = partes[0];
             parteFraccionaria = partes[1];
 
@@ -34,6 +36,9 @@ public class Redondeador implements RedondeadorAbstracto {
         char signo = numero.charAt(0);
 
         if(partes.length >= 2){
+            if(precision == 0 )
+                return partes[0];
+
             parteFraccionaria = partes[1];
             if(parteFraccionaria.length() > precision){
 
@@ -58,6 +63,8 @@ public class Redondeador implements RedondeadorAbstracto {
         String parteFraccionaria;
 
         if(partes.length >= 2){
+            if(precision == 0 )
+                return partes[0];
             parteFraccionaria = partes[1];
 
             if(parteFraccionaria.length() > precision){
@@ -77,6 +84,8 @@ public class Redondeador implements RedondeadorAbstracto {
         String parteFraccionaria;
 
         if(partes.length >= 2) {
+            if(precision == 0 )
+                return partes[0];
             parteFraccionaria = partes[1];
 
             if(parteFraccionaria.length() > precision){
