@@ -92,7 +92,7 @@ public class Convertidor implements ConvertidorAbstracto{
      */
     public String fromDecimal(String numero, int baseDestino) {
 
-        Double num = Double.parseDouble(numero);
+        double num = Double.parseDouble(numero);
         int precision = 10;
         BigDecimal bd = new BigDecimal(num);
         BigDecimal mult = new BigDecimal(baseDestino).pow(precision);

@@ -12,7 +12,7 @@
         android:layout_marginBottom="10dp"
         android:layout_marginStart="10dp"
         android:textColor="@null"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:layout_height="wrap_content" />
 
 </LinearLayout>

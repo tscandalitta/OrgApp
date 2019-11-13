@@ -26,7 +26,7 @@ public class Complementador implements ComplementadorAbstracto{
 
     /**
      * Verifica si un numero es de la forma "(base-1)0000000"
-     * @param numero
+     * @param numero numero a chequear
      * @return true si es el menor negativo en rc, false en caso contrario
      */
     private boolean menorNegativoRC(String numero){

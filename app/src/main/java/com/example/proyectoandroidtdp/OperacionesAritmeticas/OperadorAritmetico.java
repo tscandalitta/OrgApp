@@ -36,7 +36,7 @@ public class OperadorAritmetico implements  OperadorAritmeticoAbstracto {
         return resultado;
     }
 
-    public String sumarSM(String numX, String numY, int base) throws InvalidParameterException {
+    private String sumarSM(String numX, String numY, int base) throws InvalidParameterException {
 
         verificarOperandos(numX,numY,base);
 
@@ -125,17 +125,15 @@ public class OperadorAritmetico implements  OperadorAritmeticoAbstracto {
 
     /**
      * Verifica que el resultado sea valido
-     * @param resultado
+     * @param resultado resultado obtenido tras operar en RC
      * @param longitud: longitud de los operandos
-     * @param signo: de los operandos, como solo se mira cuando el resultado es mas
      *  largo que operandos, es porque son del mismo signo
      * @return valido o no
      */
     private boolean numeroValidoRC(String resultado, int longitud) {
-        boolean valido = false;
-        if(resultado.length() <= longitud) //Si el resultado tiene la misma longitud que los operandos, es valido
-            valido = true;
-        else {
+        boolean valido = true;
+
+        if(resultado.length() > longitud) {
             if(resultado.charAt(1) != '1')
                 valido = false;
             for(int i = 2; i < resultado.length() && valido; i++) //verifico que sea el caso limite del mayor negativo "(base-1)000..00"

@@ -1,11 +1,9 @@
 package com.example.proyectoandroidtdp.CambioDeBase;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.InputFilter;
-import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,13 +11,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltros;
-import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltrosAbstracto;
 import com.example.proyectoandroidtdp.R;
 
 
