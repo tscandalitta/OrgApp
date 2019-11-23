@@ -20,7 +20,7 @@
     <string name="sistemas_de_representacion">Sistemas de Representación</string>
     <string name="aritmetica">Aritmética</string>
 
-    <string name="generar_rangos">Generador de Rangos</string>
+    <string name="generar_rangos">Generar de Rangos</string>
 
 
     <string-array name="arraySpinner">
@@ -74,7 +74,7 @@
         de bits deberá ser mayor a dos.\n
     </string>
 
-    <string name="texto_ayuda_redondeo">* Ingrese un número binario y los dígitos de precisión, luego
+    <string name="texto_ayuda_redondear">* Ingrese un número binario y los dígitos de precisión, luego
         presione el botón "Redondear". Se le mostrará el número resultante utilizando los distintos
         tipos de redondeo.\n
     </string>
@@ -93,12 +93,12 @@
     <string name="texto_ayuda_generar_hamming">* Ingrese los bits de datos a transmitir y se le
         mostrará su codificación tanto en Hamming básico como extendido.\n
         * Los bits son ordenados de izquierda a derecha.\n
-        * Hamming 4 contempla el bit de paridad asumiendo que se trabaja con paridad par.
+        * Hamming 4 contempla el bit de paridad asumiendo que se trabaja con paridad par.\n
     </string>
 
     <string name="texto_ayuda_verificar_hamming">* Ingrese los bits del paquete recibido y se le
         mostrará si fue recibido correctamente o con error de acuerdo a las diferentes políticas.\n
-        * Hamming 4 contempla el bit de paridad asumiendo que se trabaja con paridad par.
+        * Hamming 4 contempla el bit de paridad asumiendo que se trabaja con paridad par.\n
     </string>
 
     <string name="informacion_inicio">Esta aplicación fue diseñada como parte del final de TDP -

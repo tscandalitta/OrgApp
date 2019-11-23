@@ -215,7 +215,7 @@
                 <TextView
                     style="@style/Cuerpos"
                     android:layout_below="@+id/titulo_ayuda_redondeo"
-                    android:text="@string/texto_ayuda_redondeo" />
+                    android:text="@string/texto_ayuda_redondear" />
 
             </RelativeLayout>
         </ScrollView>
