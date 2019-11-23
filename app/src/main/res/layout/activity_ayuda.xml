@@ -5,219 +5,213 @@
     android:layout_height="match_parent"
     tools:context=".Main.ActivityAyuda">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Main.INICIOFragment">
+        android:layout_marginBottom="20dp">
 
-        <ScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tituloAyuda"
+                style="@style/Titulos"
+                android:text="@string/informacion_y_ayuda" />
+
+            <TextView
+                android:id="@+id/cuerpoAyuda"
+                style="@style/Cuerpos"
+                android:layout_below="@id/tituloAyuda"
+                android:text="@string/texto_ayuda" />
+
+
+            <View
+                android:id="@+id/first"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/cuerpoAyuda"
+                android:background="#777" />
+
+            <TextView
+                android:id="@+id/tituloAyudaConvertidor"
+                style="@style/Titulos"
+                android:layout_below="@id/first"
+                android:text="@string/cambio_de_base" />
+
+            <TextView
+                android:id="@+id/CuerpoAyudaConvertidor"
+                style="@style/Cuerpos"
+                android:layout_below="@id/tituloAyudaConvertidor"
+                android:text="@string/texto_ayuda_cambio_de_base" />
+
+
+            <View
+                android:id="@+id/secondDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/CuerpoAyudaConvertidor"
+                android:background="#777" />
+
+            <TextView
+                android:id="@+id/titulo_ayuda_sistemas_representacion"
+                style="@style/Titulos"
+                android:layout_below="@id/secondDivider"
+                android:text="@string/sistemas_de_representacion" />
+
+            <TextView
+                android:id="@+id/cuerpoAyudaSistemasDeRepresentacion"
+                style="@style/Cuerpos"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp">
-
-                <TextView
-                    android:id="@+id/tituloAyuda"
-                    style="@style/Titulos"
-                    android:text="@string/informacion_y_ayuda" />
-
-                <TextView
-                    android:id="@+id/cuerpoAyuda"
-                    style="@style/Cuerpos"
-                    android:layout_below="@id/tituloAyuda"
-                    android:text="@string/texto_ayuda" />
+                android:layout_below="@id/titulo_ayuda_sistemas_representacion"
+                android:text="@string/texto_ayuda_sistemas_de_representacion" />
 
 
-                <View
-                    android:id="@+id/first"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@id/cuerpoAyuda"
-                    android:background="#777" />
+            <View
+                android:id="@+id/thirdDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/cuerpoAyudaSistemasDeRepresentacion"
+                android:background="#777" />
 
-                <TextView
-                    android:id="@+id/tituloAyudaConvertidor"
-                    style="@style/Titulos"
-                    android:layout_below="@id/first"
-                    android:text="@string/cambio_de_base" />
+            <TextView
+                android:id="@+id/titulo_operaciones_aritmeticas"
+                style="@style/Titulos"
+                android:layout_below="@id/thirdDivider"
+                android:text="@string/operaciones_aritmeticas" />
 
-                <TextView
-                    android:id="@+id/CuerpoAyudaConvertidor"
-                    style="@style/Cuerpos"
-                    android:layout_below="@id/tituloAyudaConvertidor"
-                    android:text="@string/texto_ayuda_cambio_de_base" />
-
-
-                <View
-                    android:id="@+id/secondDivider"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@id/CuerpoAyudaConvertidor"
-                    android:background="#777" />
-
-                <TextView
-                    android:id="@+id/titulo_ayuda_sistemas_representacion"
-                    style="@style/Titulos"
-                    android:layout_below="@id/secondDivider"
-                    android:text="@string/sistemas_de_representacion" />
-
-                <TextView
-                    android:id="@+id/cuerpoAyudaSistemasDeRepresentacion"
-                    style="@style/Cuerpos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/titulo_ayuda_sistemas_representacion"
-                    android:text="@string/texto_ayuda_sistemas_de_representacion" />
+            <TextView
+                android:id="@+id/cuerpo_ayuda_operaciones"
+                style="@style/Cuerpos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titulo_operaciones_aritmeticas"
+                android:text="@string/texto_ayuda_operaciones_aritmeticas" />
 
 
-                <View
-                    android:id="@+id/thirdDivider"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@id/cuerpoAyudaSistemasDeRepresentacion"
-                    android:background="#777" />
+            <View
+                android:id="@+id/fourthDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/cuerpo_ayuda_operaciones"
+                android:background="#777" />
 
-                <TextView
-                    android:id="@+id/titulo_operaciones_aritmeticas"
-                    style="@style/Titulos"
-                    android:layout_below="@id/thirdDivider"
-                    android:text="@string/operaciones_aritmeticas" />
+            <TextView
+                android:id="@+id/titulo_generador_rangos"
+                style="@style/Titulos"
+                android:layout_below="@+id/fourthDivider"
+                android:text="@string/generar_rangos" />
 
-                <TextView
-                    android:id="@+id/cuerpo_ayuda_operaciones"
-                    style="@style/Cuerpos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/titulo_operaciones_aritmeticas"
-                    android:text="@string/texto_ayuda_operaciones_aritmeticas" />
+            <TextView
+                android:id="@+id/cuerpo_ayuda_generador_rangos"
+                style="@style/Cuerpos"
+                android:layout_below="@+id/titulo_generador_rangos"
+                android:text="@string/texto_ayuda_generar_rangos" />
 
 
-                <View
-                    android:id="@+id/fourthDivider"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@+id/cuerpo_ayuda_operaciones"
-                    android:background="#777" />
+            <View
+                android:id="@+id/fifthDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/cuerpo_ayuda_generador_rangos"
+                android:background="#777" />
 
-                <TextView
-                    android:id="@+id/titulo_generador_rangos"
-                    style="@style/Titulos"
-                    android:layout_below="@+id/fourthDivider"
-                    android:text="@string/generar_rangos" />
+            <TextView
+                android:id="@+id/titulo_ayuda_generador_crc"
+                style="@style/Titulos"
+                android:layout_below="@+id/fifthDivider"
+                android:text="@string/generar_crc" />
 
-                <TextView
-                    android:id="@+id/cuerpo_ayuda_generador_rangos"
-                    style="@style/Cuerpos"
-                    android:layout_below="@+id/titulo_generador_rangos"
-                    android:text="@string/texto_ayuda_generar_rangos" />
-
-
-                <View
-                    android:id="@+id/fifthDivider"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@id/cuerpo_ayuda_generador_rangos"
-                    android:background="#777" />
-
-                <TextView
-                    android:id="@+id/titulo_ayuda_generador_crc"
-                    style="@style/Titulos"
-                    android:layout_below="@+id/fifthDivider"
-                    android:text="@string/generar_crc" />
-
-                <TextView
-                    android:id="@+id/cuerpo_ayuda_generador_crc"
-                    style="@style/Cuerpos"
-                    android:layout_below="@+id/titulo_ayuda_generador_crc"
-                    android:text="@string/texto_ayuda_generar_crc" />
+            <TextView
+                android:id="@+id/cuerpo_ayuda_generador_crc"
+                style="@style/Cuerpos"
+                android:layout_below="@+id/titulo_ayuda_generador_crc"
+                android:text="@string/texto_ayuda_generar_crc" />
 
 
-                <View
-                    android:id="@+id/sixthDivider"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@id/cuerpo_ayuda_generador_crc"
-                    android:background="#777" />
+            <View
+                android:id="@+id/sixthDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/cuerpo_ayuda_generador_crc"
+                android:background="#777" />
 
-                <TextView
-                    android:id="@+id/titulo_ayuda_verificador_crc"
-                    style="@style/Titulos"
-                    android:layout_below="@+id/sixthDivider"
-                    android:text="@string/verificar_crc" />
+            <TextView
+                android:id="@+id/titulo_ayuda_verificador_crc"
+                style="@style/Titulos"
+                android:layout_below="@+id/sixthDivider"
+                android:text="@string/verificar_crc" />
 
-                <TextView
-                    android:id="@+id/cuerpo_ayuda_verificador_crc"
-                    style="@style/Cuerpos"
-                    android:layout_below="@+id/titulo_ayuda_verificador_crc"
-                    android:text="@string/texto_ayuda_verificar_crc" />
-
-
-                <View
-                    android:id="@+id/seventhDivider"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@id/cuerpo_ayuda_verificador_crc"
-                    android:background="#777" />
-
-                <TextView
-                    android:id="@+id/titulo_ayuda_generar_hamming"
-                    style="@style/Titulos"
-                    android:layout_below="@+id/seventhDivider"
-                    android:text="@string/generar_hamming" />
-
-                <TextView
-                    android:id="@+id/cuerpos_ayuda_generar_hamming"
-                    style="@style/Cuerpos"
-                    android:layout_below="@+id/titulo_ayuda_generar_hamming"
-                    android:text="@string/texto_ayuda_generar_hamming" />
+            <TextView
+                android:id="@+id/cuerpo_ayuda_verificador_crc"
+                style="@style/Cuerpos"
+                android:layout_below="@+id/titulo_ayuda_verificador_crc"
+                android:text="@string/texto_ayuda_verificar_crc" />
 
 
-                <View
-                    android:id="@+id/eightDivider"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@id/cuerpos_ayuda_generar_hamming"
-                    android:background="#777" />
+            <View
+                android:id="@+id/seventhDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/cuerpo_ayuda_verificador_crc"
+                android:background="#777" />
 
-                <TextView
-                    android:id="@+id/titulo_ayuda_verificar_hamming"
-                    style="@style/Titulos"
-                    android:layout_below="@+id/eightDivider"
-                    android:text="@string/verificar_hamming" />
+            <TextView
+                android:id="@+id/titulo_ayuda_generar_hamming"
+                style="@style/Titulos"
+                android:layout_below="@+id/seventhDivider"
+                android:text="@string/generar_hamming" />
 
-                <TextView
-                    android:id="@+id/cuerpos_ayuda_verificar_hamming"
-                    style="@style/Cuerpos"
-                    android:layout_below="@+id/titulo_ayuda_verificar_hamming"
-                    android:text="@string/texto_ayuda_verificar_hamming" />
+            <TextView
+                android:id="@+id/cuerpos_ayuda_generar_hamming"
+                style="@style/Cuerpos"
+                android:layout_below="@+id/titulo_ayuda_generar_hamming"
+                android:text="@string/texto_ayuda_generar_hamming" />
 
 
-                <View
-                    android:id="@+id/ninthDivider"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@id/cuerpos_ayuda_verificar_hamming"
-                    android:background="#777" />
+            <View
+                android:id="@+id/eightDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/cuerpos_ayuda_generar_hamming"
+                android:background="#777" />
 
-                <TextView
-                    android:id="@+id/titulo_ayuda_redondeo"
-                    style="@style/Titulos"
-                    android:layout_below="@+id/ninthDivider"
-                    android:text="@string/redondear" />
+            <TextView
+                android:id="@+id/titulo_ayuda_verificar_hamming"
+                style="@style/Titulos"
+                android:layout_below="@+id/eightDivider"
+                android:text="@string/verificar_hamming" />
 
-                <TextView
-                    style="@style/Cuerpos"
-                    android:layout_below="@+id/titulo_ayuda_redondeo"
-                    android:text="@string/texto_ayuda_redondear" />
+            <TextView
+                android:id="@+id/cuerpos_ayuda_verificar_hamming"
+                style="@style/Cuerpos"
+                android:layout_below="@+id/titulo_ayuda_verificar_hamming"
+                android:text="@string/texto_ayuda_verificar_hamming" />
 
-            </RelativeLayout>
-        </ScrollView>
-    </RelativeLayout>
+
+            <View
+                android:id="@+id/ninthDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/cuerpos_ayuda_verificar_hamming"
+                android:background="#777" />
+
+            <TextView
+                android:id="@+id/titulo_ayuda_redondeo"
+                style="@style/Titulos"
+                android:layout_below="@+id/ninthDivider"
+                android:text="@string/redondear" />
+
+            <TextView
+                style="@style/Cuerpos"
+                android:layout_below="@+id/titulo_ayuda_redondeo"
+                android:text="@string/texto_ayuda_redondear" />
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
