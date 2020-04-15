@@ -9,8 +9,6 @@ resultados de los distintos ejercicios que puedan llegar a realizar los alumnos 
   - Signo magnitud (SM)
   - Complemento a la base (RC)
   - Complemento a la base disminuida (DRC)
-  - **Punto flotante**
-  - **Norma IEEE 754**
 - Operaciones de suma y resta en las representaciones anteriores
 - Detección de errores:
   - CRC
@@ -22,8 +20,6 @@ resultados de los distintos ejercicios que puedan llegar a realizar los alumnos 
   - Aumentación
   - Proximidad biased (hacia afuera del cero)
   - Proximidad unbiased (hacia los pares)
-
-Los ítems en **negrita** aún no han sido implementados.
 
 
 ## Integrantes
