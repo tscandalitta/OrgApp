@@ -1,15 +1,15 @@
-package com.example.proyectoandroidtdp.Redondeo;
+package com.example.proyectoandroidtdp.Redondeo
 
-public interface RedondeadorAbstracto {
-
-
+interface Redondeador {
     /**
      * Redondea un numero binario aplicandole Truncado
      * @param numero numero a redondear
      * @param precision cantidad de bits a utilizar
      * @return numero redondeado
      */
-    String redondeoTruncado(String numero, String precision);
+
+    
+    fun redondeoTruncado(numero: String?, precision: String?): String?
 
     /**
      * Redondea un numero binario aplicandole Aumentacion
@@ -17,7 +17,7 @@ public interface RedondeadorAbstracto {
      * @param precision cantidad de bits a utilizar
      * @return numero redondeado
      */
-    String redondeoAumentacion(String numero, String precision);
+    fun redondeoAumentacion(numero: String?, precision: String?): String?
 
     /**
      * Redondea un numero binario aplicandole Proximidad Biased
@@ -25,7 +25,7 @@ public interface RedondeadorAbstracto {
      * @param precision cantidad de bits a utilizar
      * @return numero redondeado
      */
-    String redondeoBiased(String numero, String precision);
+    fun redondeoBiased(numero: String?, precision: String?): String?
 
     /**
      * Redondea un numero binario aplicandole Proximidad Unbiased
@@ -33,5 +33,5 @@ public interface RedondeadorAbstracto {
      * @param precision cantidad de bits a utilizar
      * @return numero redondeado
      */
-    String redondeoUnbiased(String numero, String precision);
+    fun redondeoUnbiased(numero: String?, precision: String?): String?
 }
