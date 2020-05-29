@@ -10,8 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltros
-import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltrosAbstracto
+import com.example.proyectoandroidtdp.filtros.CreadorDeFiltros
+import com.example.proyectoandroidtdp.filtros.CreadorDeFiltrosAbstracto
 import com.example.proyectoandroidtdp.R
 
 class RedondeoFragment : Fragment() {

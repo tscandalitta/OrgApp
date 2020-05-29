@@ -3,8 +3,8 @@ package com.example.proyectoandroidtdp.CambioDeBase;
 import android.text.InputFilter;
 import android.widget.EditText;
 
-import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltros;
-import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltrosAbstracto;
+import com.example.proyectoandroidtdp.filtros.CreadorDeFiltros;
+import com.example.proyectoandroidtdp.filtros.CreadorDeFiltrosAbstracto;
 
 public abstract class BaseSeleccionada {
 

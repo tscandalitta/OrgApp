@@ -20,7 +20,7 @@ import com.example.proyectoandroidtdp.CambioDeBase.BaseSeleccionadaBinario;
 import com.example.proyectoandroidtdp.CambioDeBase.BaseSeleccionadaDecimal;
 import com.example.proyectoandroidtdp.CambioDeBase.BaseSeleccionadaHexadecimal;
 import com.example.proyectoandroidtdp.CambioDeBase.BaseSeleccionadaOctal;
-import com.example.proyectoandroidtdp.Filtros.CreadorDeFiltros;
+import com.example.proyectoandroidtdp.filtros.CreadorDeFiltros;
 import com.example.proyectoandroidtdp.OperacionesAritmeticas.OverflowException;
 import com.example.proyectoandroidtdp.R;
 

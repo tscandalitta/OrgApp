@@ -1,61 +1,60 @@
-package com.example.proyectoandroidtdp.Filtros;
+package com.example.proyectoandroidtdp.filtros
 
-import android.text.InputFilter;
+import android.text.InputFilter
 
-public interface CreadorDeFiltrosAbstracto {
+interface CreadorDeFiltrosAbstracto {
 
     /**
      * Crea y devuelve un InputFilter para numeros fraccionarios en base 2.
      * @return InputFilter para numeros binarios fraccionarios
      */
-    InputFilter getFiltroBinarioFraccionario();
+    val filtroBinarioFraccionario: InputFilter?
 
     /**
      * Crea y devuelve un InputFilter para numeros fraccionarios signados en base 2
      * @return InputFilter para numeros binarios fraccionarios signados
      */
-    InputFilter getFiltroBinarioFraccionarioSignado();
+    val filtroBinarioFraccionarioSignado: InputFilter?
 
     /**
      * Crea y devuelve un InputFilter para numeros fraccionarios en base 8.
      * @return InputFilter para numeros octales fraccionarios
      */
-    InputFilter getFiltroOctalFraccionario();
+    val filtroOctalFraccionario: InputFilter?
 
     /**
      * Crea y devuelve un InputFilter para numeros fraccionarios en base 10.
      * @return InputFilter para numeros decimales fraccionarios
      */
-    InputFilter getFiltroDecimalFraccionario();
+    val filtroDecimalFraccionario: InputFilter?
 
     /**
      * Crea y devuelve un InputFilter para numeros fraccionarios en base 16.
      * @return InputFilter para numeros hexadecimales fraccionarios
      */
-    InputFilter getFiltroHexaFraccionario();
+    val filtroHexaFraccionario: InputFilter?
 
     /**
      * Crea y devuelve un InputFilter para numeros enteros en base 2.
      * @return InputFilter para numeros enteros binarios.
      */
-    InputFilter getFiltroBinarioEntero();
+    val filtroBinarioEntero: InputFilter?
 
     /**
      * Crea y devuelve un InputFilter para numeros enteros en base 8.
      * @return InputFilter para numeros enteros octales.
      */
-    InputFilter getFiltroOctalEntero();
+    val filtroOctalEntero: InputFilter?
 
     /**
      * Crea y devuelve un InputFilter para numeros enteros en base 10.
      * @return InputFilter para numeros enteros decimales.
      */
-    InputFilter getFiltroDecimalEntero();
+    val filtroDecimalEntero: InputFilter?
 
     /**
      * Crea y devuelve un InputFilter para numeros enteros en base 16.
      * @return InputFilter para numeros enteros hexadecimales.
      */
-    InputFilter getFiltroHexaEntero();
-
+    val filtroHexaEntero: InputFilter?
 }
