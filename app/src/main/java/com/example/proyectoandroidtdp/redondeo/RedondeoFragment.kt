@@ -1,4 +1,4 @@
-package com.example.proyectoandroidtdp.Redondeo
+package com.example.proyectoandroidtdp.redondeo
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -40,11 +40,10 @@ class RedondeoFragment : Fragment() {
                 InputType.TYPE_NUMBER_FLAG_DECIMAL
         txtNumero.inputType = tipoDeEntrada
 
-        btnRedondear.setOnClickListener(View.OnClickListener {
+        btnRedondear.setOnClickListener {
             val numeroOriginal = txtNumero.text.toString()
             val precision = txtPrecision.text.toString()
             if (numeroOriginal.isNotEmpty() && precision.isNotEmpty()) {
-
                 val numeroRedondeado = redondeador.redondeoTruncado(numeroOriginal, precision)
                 val numeroAumentacion = redondeador.redondeoAumentacion(numeroOriginal, precision)
                 val numeroBiased = redondeador.redondeoBiased(numeroOriginal, precision)
@@ -55,7 +54,7 @@ class RedondeoFragment : Fragment() {
                 txtBiased.text = numeroBiased
                 txtUnbiased.text = numeroUnbiased
             }
-        })
+        }
         return view
     }
 }

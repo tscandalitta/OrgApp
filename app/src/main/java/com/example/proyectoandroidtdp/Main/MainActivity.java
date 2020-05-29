@@ -25,7 +25,7 @@ import com.example.proyectoandroidtdp.Hamming.VerificarHammingFragment;
 import com.example.proyectoandroidtdp.GeneradorRangos.RangosFragment;
 import com.example.proyectoandroidtdp.OperacionesAritmeticas.OperacionAritmeticaFragment;
 import com.example.proyectoandroidtdp.R;
-import com.example.proyectoandroidtdp.Redondeo.RedondeoFragment;
+import com.example.proyectoandroidtdp.redondeo.RedondeoFragment;
 import com.example.proyectoandroidtdp.SistemasDeRepresentacion.SistemasDeRepresentacionFragment;
 
 

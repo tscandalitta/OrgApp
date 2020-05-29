@@ -1,4 +1,4 @@
-package com.example.proyectoandroidtdp.Redondeo
+package com.example.proyectoandroidtdp.redondeo
 
 interface Redondeador {
     /**
@@ -7,8 +7,6 @@ interface Redondeador {
      * @param precision cantidad de bits a utilizar
      * @return numero redondeado
      */
-
-    
     fun redondeoTruncado(numero: String?, precision: String?): String?
 
     /**
