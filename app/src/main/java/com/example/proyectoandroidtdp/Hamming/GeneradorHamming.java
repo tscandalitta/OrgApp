@@ -1,7 +1,7 @@
 package com.example.proyectoandroidtdp.Hamming;
 
-import com.example.proyectoandroidtdp.Conversor.Conversor;
-import com.example.proyectoandroidtdp.Conversor.ConversorAbstracto;
+import com.example.proyectoandroidtdp.conversor.Conversor;
+import com.example.proyectoandroidtdp.conversor.ConversorAbstracto;
 
 import java.security.InvalidParameterException;
 
