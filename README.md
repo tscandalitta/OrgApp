@@ -24,13 +24,11 @@ resultados de los distintos ejercicios que puedan llegar a realizar los alumnos 
 
 ## Integrantes
 
-- Horus Moro
-- Maximiliano Montenegro
-- Tomás Scandalitta
+- [Horus Moro](https://github.com/Horus98)
+- [Maximiliano Montenegro](https://github.com/maxi512)
+- [Tomás Scandalitta](https://github.com/tscandalitta)
 
  
 ## Información adicional
 
 Proyecto final de Tecnología de Programación - UNS - 2018
-
-unsorgapp@gmail.com
